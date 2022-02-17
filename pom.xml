@@ -58,6 +58,12 @@
 			<version>2.1.1</version>
 		</dependency>
 
+		<dependency>
+			<groupId>interpretadorPtEstruturadoJava</groupId>
+			<artifactId>interpretadorMACP</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
