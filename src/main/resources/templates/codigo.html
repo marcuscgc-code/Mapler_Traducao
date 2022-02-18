@@ -3,46 +3,159 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MAPLER</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
     <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
-</head>
-<body>
-    <form action="#" th:action="@{/codigo}" th:object="${codigo}" method="post">
-        <textarea th:field="*{texto}" rows="10" style="height: auto;">
-        </textarea>
-        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" />
-    </form>
+    <link rel="stylesheet" href="css/style.css">
 
-    <div class="panel panel-default" style="margin: 10px" th:if="${tradutor.getStatus() == 'TRUE'}">
-        <div class="panel-heading">
-            <h1 class="panel-title">Traducao</h1>
+    <title>Mapler - Compilador Portugol</title>
+
+    <style>
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #292929;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark p-3" style="background-color: #202124;">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+            <img id="img-logo" src="images/mapler-logo.png" alt="Logo do Mapler" style="width: 40px;">
+        </a>
+
+        <div class="text-gray">
+            <a href="index.html" class="text-decoration-none"><strong><span
+                    class="text-white">MAPLER</span></strong></a>
         </div>
-        <div class="panel-body">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Codigo</th>
-                    <th>Resultado</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr th:each="codigo : ${codigo}">
-                    <td >
-                        <textarea th:text="${codigo.getTexto()}" rows="10" style="height: auto;">
-                        </textarea>
-                    </td>
-                    <td >
-                        <textarea th:text="${tradutor.getTraducao()}" rows="10" style="height: auto;">
-                        </textarea>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 10px;">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Compilador</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="manuais.html">Manuais</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exemplos.html">Exemplos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://sourceforge.net/p/portugol/discussion/">Fóruns</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="desenvolvimento.html">Desenvolvimento</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="https://sourceforge.net/projects/portugol/files/stats/timeline">Estatísticas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+            </ul>
+            <hr class="d-md-none text-white-50">
+
+            <div class="ms-md-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="download.html">Download</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+</header>
+
+<main style="padding-top: 15px;padding-left: 20px;">
+    <form action="#" th:action="@{/codigo}" th:object="${codigo}" method="post">
+        <button type="button" class="btn btn-primary" style="margin-left: 44.25%;" disabled>Executar</button>
+        <input type="submit" class="btn btn-primary" value="Traduzir"/>
+
+        <div class="row" style="width: 100%;margin-top: 10px;">
+            <div class="col-sm-6">
+                <textarea rows="30" id="text_cod" th:field="*{texto}" th:text="${codigo.getTexto()}"
+                          style="min-height:50px;height:100%;width:100%;background-color: #292a2c;color: aliceblue;"></textarea>
+            </div>
+            <div class="col-sm-6" th:if="${tradutor.getStatus() != 'PROVISORIO'}">
+                <textarea rows="30" id="text_traducao" th:text="${tradutor.getTraducao()}"
+                          style="min-height:50px;height:100%;width:90%;background-color: #292a2c;color: aliceblue;"
+                          readonly></textarea>
+            </div>
+        </div>
+    </form>
+</main>
+
+<footer>
+    <div class="container-fluid mt-3 p-5" style="background-color: #202124;">
+
+        <img class="mb-3" id="img-logo" src="images/logo-branco.png" alt="Logo do Mapler" style="width: 100px;">
+        <p><em>Copyright &copy; 2006-2021</em> Projeto<strong> Mapler</strong> - Compilador Portugol. Última
+            atualização: Novembro/2021.</p>
+
+        <p>Página do Projeto: <a href="https://sourceforge.net/projects/portugol/" target="_blank"
+                                 rel="noopener noreferrer" class="text-light"><strong>sourceforge.net/projects/portugol</strong></a>.
+        </p>
+
+        <p>Site desenvolvido por <a href="https://github.com/DavidGomesh" target="_blank" rel="noopener noreferrer"
+                                    class="text-light"><strong>David Gomesh</strong></a> e <a href="https://github.com/EliasRLima"
+                                                                                              target="_blank" rel="noopener noreferrer" class="text-light"><strong>Elias Lima</strong></a>.</p>
+
     </div>
+</footer>
+
+<script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>

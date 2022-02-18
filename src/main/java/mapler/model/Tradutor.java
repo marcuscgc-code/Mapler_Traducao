@@ -31,9 +31,12 @@ public class Tradutor implements AcaoInterpretador{
     public void ativar(String codigo){
         this.status = "TRUE";
         try{
+            System.out.println(codigo);
             this.traducao = interpretadorService.traduzirDoTexto(codigo, ConversorStrategy.C);
+            System.out.println("Traduziu.");
         }catch (Exception e){
             this.traducao = e.toString();
+            System.out.println("Erro ao traduzir.");
         }
 
     }
