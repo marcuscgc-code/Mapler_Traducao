@@ -13,10 +13,11 @@ public class Tradutor implements AcaoInterpretador{
     private String status;
     private String traducao;
 
-    @Autowired
+   
     private InterpretadorService interpretadorService;
 
     public Tradutor(){
+      interpretadorService = new InterpretadorService(this);
         this.status = "FALSE";
     }
 
