@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 Core -->
+    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/bootstrap.min.css">
+
+    <!-- CSS puro -->
+    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/styles.css ">
+    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/header.css ">
+    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/footer.css ">
+    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/accordion.css ">
+
+    <!-- CSS para highlights de codigo -->
+    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/highlights.css ">
+
+    <link rel="shortcut icon" href="https://portugol.sourceforge.io/assets/images/favicon.ico">
+
+    <title>Mapler - Compilador Portugol</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <!-- Cabecalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark p-3" id="cabecalho">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <!-- No mobile o logo deve ficar a esquerda -->
+                <a href="https://portugol.sourceforge.io/" class="navbar-brand">
+                    <img src="https://portugol.sourceforge.io/assets/images/mapler-logo.png" alt="Logo do Mapler" width="40px">
+                </a>
+
+                <!-- Nome do Projeto -->
+                <!-- No mobile o nome deve ficar centralizado -->
+                <a href="https://portugol.sourceforge.io/" class="navbar-brand">
+                    <strong>MAPLER</strong>
+                </a>
+
+                <!-- Botao para abrir o menu (Disponivel apenas no mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Lista de Itens -->
+                <!-- Colocar classe "active" na tag "a" para dizer que esta ativo -->
+                <!-- Nao foi inserido nessa versao por nao ter essa dinamica -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io/manuais.html#VisaoGeral">
+                                Manuais
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io/exemplos/estrutura-codigo.html#VisaoGeral">
+                                Exemplos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://sourceforge.net/p/portugol/discussion/">
+                                Fóruns
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io/desenvolvimento.html">
+                                Desenvolvimento
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://sourceforge.net/projects/portugol/files/stats/timeline">
+                                Estatísticas
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io/contato.html">
+                                Contato
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Linha que vai dividir os menus -->
+                    <!-- Disponivel apenas no Mobile -->
+                    <hr class="text-white">
+
+                    <!-- Segunda lista de itens -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io/sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io/download.html">
+                                Download
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-3 pt-3 px-sm-5">
+            <!-- Menu -->
+            <div class="accordion mb-3" id="accordionExamplos">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingExemplos">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplos" aria-expanded="true" aria-controls="collapseExemplos">
+                            Mais Exemplos
+                        </button>
+                    </h2>
+                    <div id="collapseExemplos" class="accordion-collapse collapse show" aria-labelledby="headingExemplos" data-bs-parent="#accordionExamplos">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-12 col-sm">
+                                    <div class="row pb-1 mb-2">
+                                        <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/estrutura-codigo.html#VisaoGeral">Estrutura do Código</a></div>
+                                        <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/entrada-saida.html#VisaoGeral">Entrada e Saída</a></div>
+                                        <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/modulos.html#VisaoGeral">Módulos</a></div>
+                                    </div>
+                                </div>
+            
+                                <div class="col-6 col-sm">
+                                    <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/exemplos/tipos.html#VisaoGeral">Tipos</a>
+                                    <ul>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/tipos.html#Numericos">Numéricos</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/tipos.html#Booleano">Booleano</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/tipos.html#Literais">Literais</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/tipos.html#Vetor">Vetor</a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="col-6 col-sm">
+                                    <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/exemplos/operacoes.html#VisaoGeral">Operações</a>
+                                    <ul>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/operacoes.html#Adicao">Adição</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/operacoes.html#Subtracao">Subtração</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/operacoes.html#Multiplicacao">Multiplicação</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/operacoes.html#Divisao">Divisão</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/operacoes.html#Precedencia">Precedência</a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="col-6 col-sm">
+                                    <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/exemplos/condicionais.html#VisaoGeral">Condicionais</a>
+                                    <ul>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/condicionais.html#Se">Se</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/condicionais.html#Senao">Senão</a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="col-6 col-sm">
+                                    <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/exemplos/lacos.html#VisaoGeral">Laços</a>
+                                    <ul>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/lacos.html#Para">Para</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/lacos.html#Enquanto">Enquanto</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/lacos.html#Repita">Repita</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            
+<!-- Secao principal -->
+<section>
+    <div class="mt-4">
+        <!-- Visao Geral -->
+        <section id="VisaoGeral">
+            <!-- Descrição rapida -->
+            <!-- <hr class="mt-5"> -->
+            <h1>Tipos de Dados</h1>
+            <p class="lead">
+                <strong>Variáveis</strong> são espaços de memória reservados para armazenar valores obtidos pelo algoritmo.
+            </p>
+
+            <p class="lead">
+                Em portugol, as variáveis são declaradas na parte do bloco principal chamada <code>variaveis</code> e depois usado o seu nome declarado para acessar e manipular seus valores.
+            </p>
+
+            <pre class="pre">
+                <span class="reservada">variaveis</span><br>
+                <span class="comentario">// Local para declaração de variáveis</span><br>
+                <span class="reservada">inicio</span><br>
+                <span class="reservada">fim</span><br>
+            </pre>
+
+            <!-- Sintaxe -->
+            <h4 class="mt-5">Sintaxe</h4>
+
+            <!-- Sintaxe de Declaração -->
+            <p class="lead">
+                Uma variável é declarada dentro da estrutura <code>variaveis</code> usando <code>variavel:tipo;</code>.
+            </p>
+
+            <pre class="pre">
+                <span class="comentario">// Declarando uma variável</span><br>
+                <span class="reservada">variaveis</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;numero<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                <span class="reservada">inicio</span><br>
+                <span class="reservada">fim</span><br>
+            </pre>
+
+            <!-- Sintaxe de Acesso -->
+            <h4 class="mt-5">Acessando variáveis</h4>
+            <p class="lead">
+                Uma variavel para ser acessada basta usar seu nome na estrutura <code>inicio</code>, exemplo: <code>escrever variavel;</code>. <br>
+            </p>
+
+            <pre class="pre">
+                <span class="comentario">// Acessando uma variável</span><br>
+                <span class="reservada">variaveis</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;numero<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                <span class="reservada">inicio</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> numero;<br>
+                <span class="reservada">fim</span><br>
+            </pre>
+
+            <!-- Sintaxe de Manipulação -->
+            <h4 class="mt-5">Manipulando variáveis</h4>
+            <p class="lead">
+                Um variável pode ser manipulada atribuindo valores, variáveis ou expressões dessa forma <code>variavel &lt;- valor</code>.
+            </p>
+
+            <pre class="pre">
+                <span class="comentario">// Manipulando variáveis</span><br>
+                <span class="reservada">variaveis</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;numero<span class="caractere">:</span> <span class="tipo">inteiro</span>;<br>
+                <span class="reservada">inicio</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;numero <span class="caractere">&lt;-</span> 15 ;<br>
+                <span class="reservada">fim</span><br>
+            </pre>
+
+            <!-- Observações -->
+            <div class="alert alert-warning" role="alert">
+                <h4 class="alert-heading">Observação!</h4>
+                <ul>
+                    <li>O sistema irá reportar erro sempre que uma variável chamada não tenha sido declarada.</li>
+                    <li>É considerado como erro uma variável receber um valor de tipagem diferente ao declarado para aquela variável.</li>
+                </ul>
+            </div>
+
+            <!-- Exemplos -->
+            <h4 class="mt-5">Exemplo</h4>
+            <pre class="pre">
+                <span class="comentario">
+                    // ===== TIPOS DE DADOS =====<br>
+                </span>
+                <span class="reservada">variaveis</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;idade<span class="caractere">:</span><span class="tipo"> inteiro</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;valor<span class="caractere">:</span><span class="tipo"> real</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;disponivel<span class="caractere">:</span><span class="tipo"> logico</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cidade<span class="caractere">:</span><span class="tipo"> cadeia</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;letra<span class="caractere">:</span><span class="tipo"> caractere</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;vetor, vetor_2<span class="caractere">:</span><span class="tipo"> vetor</span><span class="caractere">[</span>1<span class="caractere">.</span><span class="caractere">.</span>4<span class="caractere">]</span> <span class="reservada">de</span> <span class="tipo"> inteiro</span>;<br>
+                <span class="reservada">inicio</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;idade <span class="caractere">&lt;-</span> 25;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;valor <span class="caractere">&lt;-</span> 2.5;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cidade <span class="caractere">&lt;-</span> <span class="string">"São Luís"</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;letra <span class="caractere">&lt;-</span> <span class="string">"c"</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;disponivel <span class="caractere">&lt;-</span> <span class="reservada">verdadeiro</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;vetor<span class="caractere">[</span>1<span class="caractere">]</span> <span class="caractere"><-</span> 2;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;vetor_2<span class="caractere">[</span>1<span class="caractere">]</span> <span class="caractere"><-</span> 2;<br>
+                <span class="reservada">fim</span><br>
+            </pre>
+        </section>
+
+        <!-- Numericos -->
+        <section id="Numericos">
+            <hr class="mt-5">
+            <h2>Numéricos</h2>
+            <p class="lead">
+                Em Portugol variáveis do tipo numérico podem ser <code>inteiro</code>, números sem casas decimais, ou <code>real</code>, números com casas decimais.
+            </p>
+
+            <pre class="pre">
+                <span class="comentario">// Exemplos de variáveis inteiras e reais</span><br>
+                <span class="reservada">variaveis</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var_inteiro<span class="caractere">:</span><span class="tipo"> inteiro</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var_real<span class="caractere">:</span><span class="tipo"> real</span>;<br>
+                <span class="reservada">inicio</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var_inteiro <span class="caractere">&lt;-</span> -1;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var_real <span class="caractere">&lt;-</span> 2.5;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var_real <span class="caractere">&lt;-</span> 2.0 + var_inteiro;<br>
+                <span class="reservada">fim</span><br>
+            </pre>
+
+            <div class="alert alert-warning" role="alert">
+                <h4 class="alert-heading">Observação!</h4>
+                <p>
+                    Atribuir valores reais a variáveis inteiras, ou vice-versa, resulta em erro.
+                </p>
+            </div>
+
+            <h4 class="mt-5">Conversão de Tipo Inteiro para Real</h4>
+            <p class="lead">
+                Só é permitido a conversão de <code>inteiro</code> para <code>real</code>, entretando, para isso é necessario que o valor <code>inteiro</code> esteja em uma expressao que contenha um valor <code>real</code>.
+            </p>
+
+            <pre class="pre">
+                <span class="comentario">// Exemplos de conversão</span><br>
+                <span class="reservada">variaveis</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var_real<span class="caractere">:</span><span class="tipo"> real</span>;<br>
+                <span class="reservada">inicio</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Funciona</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var_real <span class="caractere">&lt;-</span> 2.5 + 2;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Falha, pois precisa de pelo menos um valor real</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var_real <span class="caractere">&lt;-</span> 2 + 2;<br>
+                <span class="reservada">fim</span><br>
+            </pre>
+        </section>
+
+        <!-- Booleano -->
+        <section id="Booleano">
+            <hr class="mt-5">
+            <h2>Booleano</h2>
+            <p class="lead">
+                Variáveis do tipo Lógico, armazenam resultado de expressoes lógicas (<code>verdadeiro</code> ou <code>falso</code>).
+            </p>
+
+            <pre class="pre">
+                <span class="comentario">// Exemplo com variáveis e expressões lógicas</span><br>
+                <span class="reservada">variaveis</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var_logico<span class="caractere">:</span><span class="tipo"> logico</span>;<br>
+                <span class="reservada">inicio</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var_logico <span class="caractere">&lt;-</span> <span class="reservada">verdadeiro</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>var_logico;<br><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Falso</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var_logico <span class="caractere">&lt;-</span> 1 >= 2;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>var_logico;<br><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Verdadeiro</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var_logico <span class="caractere">&lt;-</span><span class="reservada"> nao </span>var_logico; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>var_logico;<br><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Falso</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span><span class="reservada"> nao </span>var_logico; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Verdadeiro</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span>var_logico;<br>
+                <span class="reservada">fim</span><br>
+            </pre>
+        </section>
+
+        <!-- Literais -->
+        <section id="Literais">
+            <hr class="mt-5">
+            <h2>Literais</h2>
+            <p class="lead">
+                Variáveis literais armazenam textos, podendo ser <code>cadeia</code>, usadas para textos curtos ou longos, ou <code>caractere</code>, usado para armazenar apenas um caractere.
+            </p>
+
+            <p class="lead">
+                O uso de variáveis do tipo <code>caractere</code> pode trazer economia de memória se comparadas ao uso variáveis de <code>cadeia</code>.
+            </p>
+
+            <pre class="pre">
+                <span class="comentario">// Exemplo de variáveis Literais</span><br>
+                <span class="reservada">variaveis</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cidade<span class="caractere">:</span><span class="tipo"> cadeia</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;letra<span class="caractere">:</span><span class="tipo"> caractere</span>;<br>
+                <span class="reservada">inicio</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Variável do tipo cadeia utilizada</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// para armazenar um texto</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cidade <span class="caractere">&lt;-</span> <span class="string">"São Luís - MA"</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Variável do tipo caractere </span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// utilizada para armazenar um unico caractere</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;letra <span class="caractere">&lt;-</span> <span class="string">"c"</span>;<br>
+                <span class="reservada">fim</span><br>
+            </pre>
+        </section>
+
+        <!-- Vetor -->
+        <section id="Vetor">
+            <hr class="mt-5">
+            <h2>Vetor</h2>
+            <p class="lead">
+                Vetor é um conjunto de valores de mesmo tipo. Uma variável do tipo <code>vetor</code> tem tamanho definido. Para acessar algum elemento, é usado a posição dele no vetor, também chamada de índice.
+            </p>
+
+            <pre class="pre">
+                <span class="comentario">// Sintaxe para declaração de um vetor</span> <br>
+                <span class="comentario">// 1 - posição inicial</span> <br>
+                <span class="comentario">// 9 - posição final</span> <br>
+                <span class="reservada">variaveis</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;numeros<span class="caractere">:</span><span class="tipo"> vetor</span> <span class="caractere">[</span>1<span class="caractere">.</span><span class="caractere">.</span>9<span class="caractere">]</span> de<span class="tipo"> inteiro</span>;<br>
+
+                <span class="reservada">inicio</span><br>
+                <span class="reservada">fim</span><br>
+            </pre>
+
+            <div class="alert alert-warning" role="alert">
+                <h4 class="alert-heading">Observação!</h4>
+                <p>
+                    A posicao inicial de um vetor não pode ser maior que a posição final.
+                </p>
+            </div>
+            
+            <h4 class="mt-5">Exemplo</h4>
+            <pre class="pre">
+                <span class="reservada">variaveis</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;numeros<span class="caractere">:</span><span class="tipo"> vetor</span> <span class="caractere">[</span>1<span class="caractere">.</span><span class="caractere">.</span>9<span class="caractere">]</span> de<span class="tipo"> inteiro</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;i<span class="caractere">:</span><span class="tipo"> inteiro</span>; <span class="comentario">// Será usado como indice </span><br>
+
+                <span class="reservada">inicio</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Percorre o vetor inserindo o valor de i</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">para </span>i<span class="reservada"> de </span>1 <span class="reservada">ate </span>9<span class="reservada"> passo </span>1<span class="reservada"> faca</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numeros<span class="caractere">[</span>i<span class="caractere">]</span> <span class="caractere">&lt;-</span> i;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> para</span>;<br><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">// Percorre o vetor exibindo os seus elementos</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Vetor gerado: "</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">para </span>i<span class="reservada"> de </span>1 <span class="reservada">ate </span>9<span class="reservada"> passo </span>1<span class="reservada"> faca</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Posição "</span>, i, <span class="string">" = "</span>, numeros<span class="caractere">[</span>i<span class="caractere">]</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> para</span>;<br><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;i <span class="caractere">&lt;-</span> 9;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Vetor gerado invertido: "</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">enquanto </span>i >= 1<span class="reservada"> faca</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever </span><span class="string">"Posição "</span>, i, <span class="string">" = "</span>, numeros<span class="caractere">[</span>i<span class="caractere">]</span>;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i <span class="caractere">&lt;-</span> i-1;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">fim</span><span class="reservada"> enquanto</span>;<br>
+
+                <span class="reservada">fim</span><br>
+            </pre>
+        </section>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <!-- Rodape -->
+<footer class="container-fluid p-5">
+    <!-- Logo do Mapler versao branca -->
+    <img src="https://portugol.sourceforge.io/assets/images/logo-branco.png" alt="Logo Branco do Mapler" width="100px" class="mb-3">
+
+    <!-- Informações de Copyright e Atualização -->
+    <p>
+        <em>Copyright &copy; 2006-2022</em>
+        Projeto<strong> Mapler</strong> - Compilador Portugol.
+        Última atualização: Fevereiro/2022.
+    </p>
+
+    <!-- Link para a página do projeto no sourceforge -->
+    <p>
+        Página do Projeto:
+        <a href="https://sourceforge.net/projects/portugol/" target="_blank" rel="noopener noreferrer" class="text-light">
+            <strong>sourceforge.net/projects/portugol</strong>
+        </a>.
+    </p>
+
+    <!-- Desenvolvedores do site + link para o GitHub de cada um. -->
+    <p>
+        Site desenvolvido por
+        <a href="https://github.com/DavidGomesh" target="_blank" rel="noopener noreferrer" class="text-light">
+            <strong>David Gomesh</strong>
+        </a>
+        e
+        <a href="https://github.com/EliasRLima" target="_blank" rel="noopener noreferrer" class="text-light">
+            <strong>Elias Lima</strong>
+        </a>.
+    </p>
+</footer>
+    <!-- JS -->
+    <!-- Bootstrap 5 Bundle Core -->
+<script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script></body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 Core -->
+    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/bootstrap.min.css">
+
+    <!-- CSS puro -->
+    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/styles.css ">
+    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/header.css ">
+    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/footer.css ">
+    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/accordion.css ">
+
+    <!-- CSS para highlights de codigo -->
+    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/highlights.css ">
+
+    <link rel="shortcut icon" href="https://portugol.sourceforge.io/assets/images/favicon.ico">
+
+    <title>Mapler - Compilador Portugol</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <!-- Cabecalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark p-3" id="cabecalho">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <!-- No mobile o logo deve ficar a esquerda -->
+                <a href="https://portugol.sourceforge.io/" class="navbar-brand">
+                    <img src="https://portugol.sourceforge.io/assets/images/mapler-logo.png" alt="Logo do Mapler" width="40px">
+                </a>
+
+                <!-- Nome do Projeto -->
+                <!-- No mobile o nome deve ficar centralizado -->
+                <a href="https://portugol.sourceforge.io/" class="navbar-brand">
+                    <strong>MAPLER</strong>
+                </a>
+
+                <!-- Botao para abrir o menu (Disponivel apenas no mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Lista de Itens -->
+                <!-- Colocar classe "active" na tag "a" para dizer que esta ativo -->
+                <!-- Nao foi inserido nessa versao por nao ter essa dinamica -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io/manuais.html#VisaoGeral">
+                                Manuais
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io/exemplos/estrutura-codigo.html#VisaoGeral">
+                                Exemplos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://sourceforge.net/p/portugol/discussion/">
+                                Fóruns
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io/desenvolvimento.html">
+                                Desenvolvimento
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://sourceforge.net/projects/portugol/files/stats/timeline">
+                                Estatísticas
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io/contato.html">
+                                Contato
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Linha que vai dividir os menus -->
+                    <!-- Disponivel apenas no Mobile -->
+                    <hr class="text-white">
+
+                    <!-- Segunda lista de itens -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io/sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io/download.html">
+                                Download
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-3 pt-3 px-sm-5">
+            <!-- Menu -->
+            <div class="accordion mb-3" id="accordionExamplos">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingExemplos">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplos" aria-expanded="true" aria-controls="collapseExemplos">
+                            Mais Exemplos
+                        </button>
+                    </h2>
+                    <div id="collapseExemplos" class="accordion-collapse collapse show" aria-labelledby="headingExemplos" data-bs-parent="#accordionExamplos">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-12 col-sm">
+                                    <div class="row pb-1 mb-2">
+                                        <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/estrutura-codigo.html#VisaoGeral">Estrutura do Código</a></div>
+                                        <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/entrada-saida.html#VisaoGeral">Entrada e Saída</a></div>
+                                        <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/modulos.html#VisaoGeral">Módulos</a></div>
+                                    </div>
+                                </div>
+            
+                                <div class="col-6 col-sm">
+                                    <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/exemplos/tipos.html#VisaoGeral">Tipos</a>
+                                    <ul>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/tipos.html#Numericos">Numéricos</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/tipos.html#Booleano">Booleano</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/tipos.html#Literais">Literais</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/tipos.html#Vetor">Vetor</a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="col-6 col-sm">
+                                    <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/exemplos/operacoes.html#VisaoGeral">Operações</a>
+                                    <ul>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/operacoes.html#Adicao">Adição</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/operacoes.html#Subtracao">Subtração</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/operacoes.html#Multiplicacao">Multiplicação</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/operacoes.html#Divisao">Divisão</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/operacoes.html#Precedencia">Precedência</a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="col-6 col-sm">
+                                    <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/exemplos/condicionais.html#VisaoGeral">Condicionais</a>
+                                    <ul>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/condicionais.html#Se">Se</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/condicionais.html#Senao">Senão</a></li>
+                                    </ul>
+                                </div>
+            
+                                <div class="col-6 col-sm">
+                                    <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/exemplos/lacos.html#VisaoGeral">Laços</a>
+                                    <ul>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/lacos.html#Para">Para</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/lacos.html#Enquanto">Enquanto</a></li>
+                                        <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exemplos/lacos.html#Repita">Repita</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            
+<!-- Secao principal -->
+<section>
+    <div class="mt-4">
+        <h1 id="VisaoGeral">Estrutura do Código</h1>
+        <p class="lead">
+            A Estrutura Básica de um código Portugol consiste em 3 áreas: <code>variaveis</code>, <code>inicio</code> e <code>fim</code>.
+        </p>
+
+        <ul class="lead">
+            <li><code><strong>variaveis</strong>:</code> declaração de todas as variáveis e módulos;</li>
+            <li><code><strong>inicio</strong>:</code> marca o início do algoritmo;</li>
+            <li><code><strong>fim</strong>:</code> marca o fim do algoritmo.</li>
+        </ul>
+
+        <pre class="pre">
+            <span class="comentario">// Estrutura Básica:</span><br>
+            <span class="reservada">variaveis</span><br>
+            <span class="comentario">&nbsp;&nbsp;&nbsp;&nbsp;// Nesta área declaramos as variáveis</span><br>
+            <span class="comentario">&nbsp;&nbsp;&nbsp;&nbsp;// utilizadas no algoritmo</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;var_nome<span class="caractere">:</span> <span class="tipo">cadeia</span>;<br>
+            <span class="reservada">inicio</span>
+            <span class="comentario">// A partir daqui começa o algoritmo</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Digite seu nome:"</span>;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">ler</span> var_nome;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="reservada">escrever</span> <span class="string">"Olá "</span>, var_nome;<br>
+            <span class="reservada">fim</span> <span class="comentario">// Esta instrução indica o fim do algoritmo</span><br>
+        </pre>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <!-- Rodape -->
+<footer class="container-fluid p-5">
+    <!-- Logo do Mapler versao branca -->
+    <img src="https://portugol.sourceforge.io/assets/images/logo-branco.png" alt="Logo Branco do Mapler" width="100px" class="mb-3">
+
+    <!-- Informações de Copyright e Atualização -->
+    <p>
+        <em>Copyright &copy; 2006-2022</em>
+        Projeto<strong> Mapler</strong> - Compilador Portugol.
+        Última atualização: Fevereiro/2022.
+    </p>
+
+    <!-- Link para a página do projeto no sourceforge -->
+    <p>
+        Página do Projeto:
+        <a href="https://sourceforge.net/projects/portugol/" target="_blank" rel="noopener noreferrer" class="text-light">
+            <strong>sourceforge.net/projects/portugol</strong>
+        </a>.
+    </p>
+
+    <!-- Desenvolvedores do site + link para o GitHub de cada um. -->
+    <p>
+        Site desenvolvido por
+        <a href="https://github.com/DavidGomesh" target="_blank" rel="noopener noreferrer" class="text-light">
+            <strong>David Gomesh</strong>
+        </a>
+        e
+        <a href="https://github.com/EliasRLima" target="_blank" rel="noopener noreferrer" class="text-light">
+            <strong>Elias Lima</strong>
+        </a>.
+    </p>
+</footer>
+    <!-- JS -->
+    <!-- Bootstrap 5 Bundle Core -->
+<script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script></body>
+
+</html>

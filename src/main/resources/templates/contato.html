@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 Core -->
+    <link rel="stylesheet" href="https://portugol.sourceforge.io//assets/css/bootstrap.min.css">
+
+    <!-- CSS puro -->
+    <link rel="stylesheet" href="https://portugol.sourceforge.io//assets/css/styles.css ">
+    <link rel="stylesheet" href="https://portugol.sourceforge.io//assets/css/header.css ">
+    <link rel="stylesheet" href="https://portugol.sourceforge.io//assets/css/footer.css ">
+    <link rel="stylesheet" href="https://portugol.sourceforge.io//assets/css/accordion.css ">
+
+    <!-- CSS para highlights de codigo -->
+    <link rel="stylesheet" href="https://portugol.sourceforge.io//assets/css/highlights.css ">
+
+    <link rel="shortcut icon" href="https://portugol.sourceforge.io//assets/images/favicon.ico">
+
+    <title>Mapler - Compilador Portugol</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <!-- Cabecalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark p-3" id="cabecalho">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <!-- No mobile o logo deve ficar a esquerda -->
+                <a href="https://portugol.sourceforge.io//" class="navbar-brand">
+                    <img src="https://portugol.sourceforge.io//assets/images/mapler-logo.png" alt="Logo do Mapler" width="40px">
+                </a>
+
+                <!-- Nome do Projeto -->
+                <!-- No mobile o nome deve ficar centralizado -->
+                <a href="https://portugol.sourceforge.io//" class="navbar-brand">
+                    <strong>MAPLER</strong>
+                </a>
+
+                <!-- Botao para abrir o menu (Disponivel apenas no mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Lista de Itens -->
+                <!-- Colocar classe "active" na tag "a" para dizer que esta ativo -->
+                <!-- Nao foi inserido nessa versao por nao ter essa dinamica -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io//manuais.html#VisaoGeral">
+                                Manuais
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io//exemplos/estrutura-codigo.html#VisaoGeral">
+                                Exemplos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://sourceforge.net/p/portugol/discussion/">
+                                Fóruns
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io//desenvolvimento.html">
+                                Desenvolvimento
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://sourceforge.net/projects/portugol/files/stats/timeline">
+                                Estatísticas
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io//contato.html">
+                                Contato
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Linha que vai dividir os menus -->
+                    <!-- Disponivel apenas no Mobile -->
+                    <hr class="text-white">
+
+                    <!-- Segunda lista de itens -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io//sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://portugol.sourceforge.io//download.html">
+                                Download
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Corpo principal do site -->
+    <main>
+        <div class="container py-5 px-3 pt-3 px-sm-5">
+            <!-- Content -->
+            
+<!-- Primeira secao -->
+<section>
+    <div>
+        <h1>Contato</h1>
+        <p class="lead mt-3">
+            Atualmente estamos respondendo duvidas, sugestões de melhorias e contatos em gerais por e-mail. <br>
+            <a class="text-decoration-none" href="mailto:compiladorportugol@gmail.com">
+                <span class="rosa">
+                    compiladorportugol@gmail.com
+                </span>
+            </a>
+        </p>
+
+        <p class="lead mt-5">
+            Mais informações podem ser encontradas na página do projeto no SourceForge: <br>
+            <a class="text-decoration-none" href="sourceforge.net/projects/portugol">
+                <span class="rosa">
+                    sourceforge.net/projects/portugol
+                </span>
+            </a>
+        </p>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <!-- Rodape -->
+<footer class="container-fluid p-5">
+    <!-- Logo do Mapler versao branca -->
+    <img src="https://portugol.sourceforge.io//assets/images/logo-branco.png" alt="Logo Branco do Mapler" width="100px" class="mb-3">
+
+    <!-- Informações de Copyright e Atualização -->
+    <p>
+        <em>Copyright &copy; 2006-2022</em>
+        Projeto<strong> Mapler</strong> - Compilador Portugol.
+        Última atualização: Fevereiro/2022.
+    </p>
+
+    <!-- Link para a página do projeto no sourceforge -->
+    <p>
+        Página do Projeto:
+        <a href="https://sourceforge.net/projects/portugol/" target="_blank" rel="noopener noreferrer" class="text-light">
+            <strong>sourceforge.net/projects/portugol</strong>
+        </a>.
+    </p>
+
+    <!-- Desenvolvedores do site + link para o GitHub de cada um. -->
+    <p>
+        Site desenvolvido por
+        <a href="https://github.com/DavidGomesh" target="_blank" rel="noopener noreferrer" class="text-light">
+            <strong>David Gomesh</strong>
+        </a>
+        e
+        <a href="https://github.com/EliasRLima" target="_blank" rel="noopener noreferrer" class="text-light">
+            <strong>Elias Lima</strong>
+        </a>.
+    </p>
+</footer>
+    <!-- JS -->
+    <!-- Bootstrap 5 Bundle Core -->
+<script src="https://portugol.sourceforge.io//assets/js/bootstrap.bundle.min.js"></script></body>
+
+</html>
