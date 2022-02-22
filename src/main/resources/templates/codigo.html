@@ -44,64 +44,7 @@
 </head>
 
 <body class="bg-dark">
-<header>
-    <nav class="navbar navbar-expand-md navbar-dark p-3" style="background-color: #202124;">
-        <!-- Brand -->
-        <a class="navbar-brand" href="index.html">
-            <img id="img-logo" src="images/mapler-logo.png" alt="Logo do Mapler" style="width: 40px;">
-        </a>
-
-        <div class="text-gray">
-            <a href="index.html" class="text-decoration-none"><strong><span
-                    class="text-white">MAPLER</span></strong></a>
-        </div>
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 10px;">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tradutor</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="manuais.html">Manuais</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="exemplos.html">Exemplos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://sourceforge.net/p/portugol/discussion/">Fóruns</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="desenvolvimento.html">Desenvolvimento</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="https://sourceforge.net/projects/portugol/files/stats/timeline">Estatísticas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
-                </li>
-            </ul>
-            <hr class="d-md-none text-white-50">
-
-            <div class="ms-md-auto">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre.html">Sobre</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="download.html">Download</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+<header th:replace="fragmentos/header.html"></header>
 
 <main style="padding-top: 15px;padding-left: 20px;">
     <form action="#" th:action="@{/codigo}" th:object="${codigo}" method="post">
