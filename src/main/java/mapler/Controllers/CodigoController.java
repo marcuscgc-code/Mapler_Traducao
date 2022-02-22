@@ -12,11 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class CodigoController {
 
-    @GetMapping("/")
-    public String index() {
-       return "index";
-    }
-
     @GetMapping("/codigo")
     public String codigo(Model model) {
         model.addAttribute("codigo", new Codigo());
