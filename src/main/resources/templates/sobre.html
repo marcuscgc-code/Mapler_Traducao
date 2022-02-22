@@ -1,28 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bootstrap 5 Core -->
-    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/bootstrap.min.css">
-
-    <!-- CSS puro -->
-    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/styles.css ">
-    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/header.css ">
-    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/footer.css ">
-    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/accordion.css ">
-
-    <!-- CSS para highlights de codigo -->
-    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/highlights.css ">
-
-    <link rel="shortcut icon" href="https://portugol.sourceforge.io/assets/images/favicon.ico">
-
-    <title>Mapler - Compilador Portugol</title>
-</head>
+<head th:replace="fragmentos/head.html"></head>
 <body>
 
     <!-- Header -->
@@ -174,37 +153,7 @@
 
     <!-- Footer -->
     <!-- Rodape -->
-<footer class="container-fluid p-5">
-    <!-- Logo do Mapler versao branca -->
-    <img src="https://portugol.sourceforge.io/assets/images/logo-branco.png" alt="Logo Branco do Mapler" width="100px" class="mb-3">
-
-    <!-- Informações de Copyright e Atualização -->
-    <p>
-        <em>Copyright &copy; 2006-2022</em>
-        Projeto<strong> Mapler</strong> - Compilador Portugol.
-        Última atualização: Fevereiro/2022.
-    </p>
-
-    <!-- Link para a página do projeto no sourceforge -->
-    <p>
-        Página do Projeto:
-        <a href="https://sourceforge.net/projects/portugol/" target="_blank" rel="noopener noreferrer" class="text-light">
-            <strong>sourceforge.net/projects/portugol</strong>
-        </a>.
-    </p>
-
-    <!-- Desenvolvedores do site + link para o GitHub de cada um. -->
-    <p>
-        Site desenvolvido por
-        <a href="https://github.com/DavidGomesh" target="_blank" rel="noopener noreferrer" class="text-light">
-            <strong>David Gomesh</strong>
-        </a>
-        e
-        <a href="https://github.com/EliasRLima" target="_blank" rel="noopener noreferrer" class="text-light">
-            <strong>Elias Lima</strong>
-        </a>.
-    </p>
-</footer>
+    <footer th:replace="fragmentos/footer.html"></footer>
     <!-- JS -->
     <!-- Bootstrap 5 Bundle Core -->
 <script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script></body>

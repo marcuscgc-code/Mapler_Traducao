@@ -1,47 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
-    <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/style.css">
-
-    <title>Mapler - Compilador Portugol</title>
-
-    <style>
-        .collapsible {
-            background-color: #777;
-            color: white;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-        }
-
-        .active,
-        .collapsible:hover {
-            background-color: rgb(255, 255, 255);
-            color: black;
-        }
-
-        .content {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
-            background-color: #292929;
-        }
-    </style>
-</head>
+<head th:replace="fragmentos/head.html"></head>
 
 <body class="bg-dark">
 <header th:replace="fragmentos/header.html"></header>
@@ -65,23 +25,7 @@
     </form>
 </main>
 
-<footer>
-    <div class="container-fluid mt-3 p-5" style="background-color: #202124;">
-
-        <img class="mb-3" id="img-logo" src="images/logo-branco.png" alt="Logo do Mapler" style="width: 100px;">
-        <p><em>Copyright &copy; 2006-2021</em> Projeto<strong> Mapler</strong> - Compilador Portugol. Última
-            atualização: Novembro/2021.</p>
-
-        <p>Página do Projeto: <a href="https://sourceforge.net/projects/portugol/" target="_blank"
-                                 rel="noopener noreferrer" class="text-light"><strong>sourceforge.net/projects/portugol</strong></a>.
-        </p>
-
-        <p>Site desenvolvido por <a href="https://github.com/DavidGomesh" target="_blank" rel="noopener noreferrer"
-                                    class="text-light"><strong>David Gomesh</strong></a> e <a href="https://github.com/EliasRLima"
-                                                                                              target="_blank" rel="noopener noreferrer" class="text-light"><strong>Elias Lima</strong></a>.</p>
-
-    </div>
-</footer>
+<footer th:replace="fragmentos/footer.html"></footer>
 
 <script>
         var coll = document.getElementsByClassName("collapsible");
