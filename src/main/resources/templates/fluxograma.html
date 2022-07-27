@@ -9,32 +9,25 @@
 <header th:replace="fragmentos/header.html"></header>
 <!-- Corpo principal do site -->
 <main>
-  <div class="container py-5 px-3 pt-3 px-sm-5">
-    <!-- Content -->
+    <div class="w-100 p-3 h-100">
+      <div class="row h-100">
+          <div class="col-sm-1" >
+              <h5>Figuras</h5>
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false">Inicio</a>
+                  <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false">Entrada</a>
+                  <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false">Saida</a>
+                  <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false">Processamento</a>
+                  <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false">Decisao</a>
+                  <a class="nav-link" data-toggle="pill" href="#" role="tab" aria-selected="false">Fim</a>
+              </div>
+          </div>
+          <div class="col-sm-11" style="background-color: white">
 
-    <!-- Primeira secao -->
-    <section>
-      <div>
-        <h1>Fluxograma</h1>
-
-      </div>
-    </section>
-    <div class="row" style="width: 100%;margin-top: 10px;">
-      <div class="col-sm-2" style="background-color: #7C5C00">
-          <h5>Figuras</h5>
-          <input type="submit" class="btn btn-primary" value="Inicio"/> </br>
-          <input type="submit" class="btn btn-primary" value="Fim"/></br>
-          <input type="submit" class="btn btn-primary" value="Entrada"/></br>
-          <input type="submit" class="btn btn-primary" value="Saida"/></br>
-          <input type="submit" class="btn btn-primary" value="Decisao"/></br>
-          <input type="submit" class="btn btn-primary" value="Processamento"/>
-      </div>
-      <div class="col-sm-10" style="background-color: rebeccapurple">
-        <h2>Area de desenhar</h2>
+          </div>
       </div>
     </div>
 
-  </div>
 </main>
 
 <!-- Footer -->
