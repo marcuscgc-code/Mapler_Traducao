@@ -8,30 +8,57 @@ public class ExemploController {
 
     @GetMapping("/exemplo")
     public String exemplo() {
-        return "exemplos/estrutura-codigo";
+        return "exemplos/exemplo";
     }
 
-    @GetMapping("/exemplo/estrutura-codigo")
+    //----------------------------------------- PORTUGOL -----------------------------------------
+    @GetMapping("/exemplo/portugol/estrutura-codigo")
     public String exemploEstrutura() {
-        return "exemplos/estrutura-codigo";
+        return "exemplos/portugol/estrutura-codigo";
     }
 
-    @GetMapping("/exemplo/entrada-saida")
-    public String exemploEntrada(){ return  "exemplos/entrada-saida"; }
+    @GetMapping("/exemplo/portugol/entrada-saida")
+    public String exemploEntrada(){ return  "exemplos/portugol/entrada-saida"; }
 
-    @GetMapping("/exemplo/modulos")
-    public String exemploModulos() { return "exemplos/modulos"; }
+    @GetMapping("/exemplo/portugol/modulos")
+    public String exemploModulos() { return "exemplos/portugol/modulos"; }
 
-    @GetMapping("/exemplo/tipos")
-    public String exemploTipos() { return "exemplos/tipos"; }
+    @GetMapping("/exemplo/portugol/tipos")
+    public String exemploTipos() { return "exemplos/portugol/tipos"; }
 
-    @GetMapping("/exemplo/operacoes")
-    public String exemploOperacoes() { return "exemplos/operacoes"; }
+    @GetMapping("/exemplo/portugol/operacoes")
+    public String exemploOperacoes() { return "exemplos/portugol/operacoes"; }
 
-    @GetMapping("/exemplo/condicionais")
-    public String exemploCondicionais() { return "exemplos/condicionais"; }
+    @GetMapping("/exemplo/portugol/condicionais")
+    public String exemploCondicionais() { return "exemplos/portugol/condicionais"; }
 
-    @GetMapping("/exemplo/lacos")
-    public String exemploLacos() { return "exemplos/lacos"; }
+    @GetMapping("/exemplo/portugol/lacos")
+    public String exemploLacos() { return "exemplos/portugol/lacos"; }
 
+    //-----------------------------------------  FIM PORTUGOL -----------------------------------------
+
+    //-----------------------------------------  FLUXOGRAMA -----------------------------------------
+
+    @GetMapping("/exemplo/fluxograma/estrutura-fluxograma")
+    public String exemploEstruturaFluxograma() {
+        return "exemplos/fluxograma/estrutura-fluxograma";
+    }
+
+    @GetMapping("/exemplo/fluxograma/entrada-saida")
+    public String exemploEntradaFluxograma(){ return  "exemplos/fluxograma/entrada-saida"; }
+
+    @GetMapping("/exemplo/fluxograma/associacao")
+    public String exemploAssociacao() { return "exemplos/fluxograma/associacao"; }
+
+
+    @GetMapping("/exemplo/fluxograma/operacoes")
+    public String exemploOperacoesFluxograma() { return "exemplos/fluxograma/operacoes"; }
+
+    @GetMapping("/exemplo/fluxograma/condicionais")
+    public String exemploCondicionaisFluxograma() { return "exemplos/fluxograma/condicionais"; }
+
+    @GetMapping("/exemplo/fluxograma/lacos")
+    public String exemploLacosFluxograma() { return "exemplos/fluxograma/lacos"; }
+
+    //----------------------------------------  FIM FLUXOGRAMA ---------------------------------------
 }
