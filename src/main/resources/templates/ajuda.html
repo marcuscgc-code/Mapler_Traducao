@@ -1,118 +1,15 @@
 <!DOCTYPE html>
 
-<html lang="pt-BR">
-
-<!-- Head -->
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MAPLER - Interpretador Portugol">
-    <meta name="keywords" content="MAPLER, MACP, MA, CP, interpretador ,compilador, portugol, maranhão, brasil, programação, programacao, desenvolvimento, algoritmo">
-    <meta name="robots" content="INDEX,FOLLOW" />
-
-    <!-- Bootstrap 5 Core -->
-    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/bootstrap.min.css">
-
-    <!-- CSS puro -->
-    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/styles.css ">
-    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/header.css ">
-    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/footer.css ">
-    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/accordion.css ">
-
-    <!-- CSS para highlights de codigo -->
-    <link rel="stylesheet" href="https://portugol.sourceforge.io/assets/css/highlights.css ">
-
-    <link rel="shortcut icon" href="https://portugol.sourceforge.io/assets/images/favicon.ico">
-
-    <title>Mapler - Interpretador Portugol</title>
-</head>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragmentos/head.html"></head>
 
 <body>
-
 <!-- Header -->
 <!-- Cabecalho -->
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark p-3" id="cabecalho">
-        <div class="container-fluid">
-            <!-- Logo -->
-            <!-- No mobile o logo deve ficar a esquerda -->
-            <a href="https://portugol.sourceforge.io/" class="navbar-brand">
-                <img src="https://portugol.sourceforge.io/assets/images/mapler-logo.png" alt="Logo do Mapler" width="40px">
-            </a>
+<header th:replace="fragmentos/header.html"></header>
 
-            <!-- Nome do Projeto -->
-            <!-- No mobile o nome deve ficar centralizado -->
-            <a href="https://portugol.sourceforge.io/" class="navbar-brand">
-                <strong>MAPLER</strong>
-            </a>
-
-            <!-- Botao para abrir o menu (Disponivel apenas no mobile) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Lista de Itens -->
-            <!-- Colocar classe "active" na tag "a" para dizer que esta ativo -->
-            <!-- Nao foi inserido nessa versao por nao ter essa dinamica -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://portugol.sourceforge.io/exemplos/estrutura-codigo.html#VisaoGeral">
-                            Portugol
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://portugol.sourceforge.io/fluxograma/geral.html">
-                            Fluxograma
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://portugol.sourceforge.io/desenvolvimento.html">
-                            Desenvolvimento
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://portugol.sourceforge.io/ajuda.html">
-                            Ajuda
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://portugol.sourceforge.io/hubexercicios.html">
-                            Exercícios
-                        </a>
-                    </li>
-                </ul>
-
-                <!-- Linha que vai dividir os menus -->
-                <!-- Disponivel apenas no Mobile -->
-                <hr class="text-white">
-
-                <!-- Segunda lista de itens -->
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://portugol.sourceforge.io/sobre.html">
-                            Sobre
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://portugol.sourceforge.io/download.html">
-                            Download
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-<!-- Corpo principal do site -->
-<main>
+    <main class="container py-5 px-3 pt-3 px-sm-5">
+    <!-- Corpo principal do site -->
     <div class="container py-5 px-3 pt-3 px-sm-5">
         <h1 class="mb-4">Suporte ao usuário</h1>
         <div class="accordion mb-3" id="accordionAManual">
@@ -125,7 +22,7 @@
                 <div id="collapseManual" class="accordion-collapse collapse " aria-labelledby="headingManual" data-bs-parent="#accordionManual">
                     <div class="accordion-body">
                         <p>Com dúvidas quanto ao download, instalação ou uso? Fique à vontade para verificar nosso manual do usuário.</p>
-                        <a href="https://portugol.sourceforge.io/manuais.html#VisaoGeral"><button class="btn btn-light">Manual</button></a>
+                        <a href="/manuais#VisaoGeral"><button class="btn btn-light">Manual</button></a>
                     </div>
                 </div>
             </div>
@@ -141,7 +38,7 @@
                     <div class="accordion-body">
                         <p>O projeto Mapler conta com um fórum de discussão entre usuários.
                             Nele, é possível informar problemas e sugerir novas funcionalidades, além de ser um excelente espaço para sanar dúvidas sobre os exercícios propostos. Seu feedback é muito importante no processo de melhoria contínua do Mapler!</p>
-                        <a href="https://sourceforge.net/p/portugol/discussion/"><button class="btn btn-light">Fórum</button></a>
+                        <a href="/discussion"><button class="btn btn-light">Fórum</button></a>
                     </div>
                 </div>
             </div>
@@ -306,39 +203,10 @@
         </div>
     </div>
 </main>
+        !-- Footer -->
+        <!-- Rodape -->
+        <footer th:replace="fragmentos/footer.html"></footer>
 
-<!-- Footer -->
-<!-- Rodape -->
-<footer class="container-fluid p-5">
-    <!-- Logo do Mapler versao branca -->
-    <img src="https://portugol.sourceforge.io/assets/images/logo-branco.png" alt="Logo Branco do Mapler" width="100px" class="mb-3">
-
-    <!-- Informações de Copyright e Atualização -->
-    <p>
-        <em>Copyright &copy; 2006-2023</em> Projeto
-        <strong> Mapler</strong> - Interpretador Portugol. Última atualização: Setembro/2023.
-    </p>
-
-    <!-- Link para a página do projeto no sourceforge -->
-    <p>
-        Página do Projeto:
-        <a href="https://sourceforge.net/projects/portugol/" target="_blank" rel="noopener noreferrer" class="text-light">
-            <strong>sourceforge.net/projects/portugol</strong>
-        </a>.
-    </p>
-
-    <!-- Desenvolvedores do site + link para o GitHub de cada um. -->
-    <p>
-        Site desenvolvido por
-        <a href="https://github.com/DavidGomesh" target="_blank" rel="noopener noreferrer" class="text-light">
-            <strong>David Gomesh</strong>
-        </a>
-        e
-        <a href="https://github.com/EliasRLima" target="_blank" rel="noopener noreferrer" class="text-light">
-            <strong>Elias Lima</strong>
-        </a>.
-    </p>
-</footer>
 <!-- JS -->
 <!-- Bootstrap 5 Bundle Core -->
 <script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script>
