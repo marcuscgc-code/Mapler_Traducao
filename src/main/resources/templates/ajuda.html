@@ -4,8 +4,6 @@
 <head th:replace="fragmentos/head.html"></head>
 
 <body>
-<!-- Header -->
-<!-- Cabecalho -->
 <header th:replace="fragmentos/header.html"></header>
 
     <main class="container py-5 px-3 pt-3 px-sm-5">
@@ -22,7 +20,7 @@
                 <div id="collapseManual" class="accordion-collapse collapse " aria-labelledby="headingManual" data-bs-parent="#accordionManual">
                     <div class="accordion-body">
                         <p>Com dúvidas quanto ao download, instalação ou uso? Fique à vontade para verificar nosso manual do usuário.</p>
-                        <a href="/manuais#VisaoGeral"><button class="btn btn-light">Manual</button></a>
+                        <a href="/ajuda/manuais#VisaoGeral"><button class="btn btn-light">Manual</button></a>
                     </div>
                 </div>
             </div>
@@ -38,7 +36,7 @@
                     <div class="accordion-body">
                         <p>O projeto Mapler conta com um fórum de discussão entre usuários.
                             Nele, é possível informar problemas e sugerir novas funcionalidades, além de ser um excelente espaço para sanar dúvidas sobre os exercícios propostos. Seu feedback é muito importante no processo de melhoria contínua do Mapler!</p>
-                        <a href="/discussion"><button class="btn btn-light">Fórum</button></a>
+                        <a href="https://sourceforge.net/p/portugol/discussion/"><button class="btn btn-light">Fórum</button></a>
                     </div>
                 </div>
             </div>
@@ -100,7 +98,7 @@
                                     <div class="accordion-body">
                                         <div class="mb-3">
                                             <p>Observe os elementos já posicionados, provavelmente você já adicionou um início e/ou fim
-                                                na área de trabalho do Mapler. Em um fluxograma, você só pode ter um elemento ínicio e um elemento fim, conforme nosso <a href="https://portugol.sourceforge.io/manuais.html#VisaoGeral">Manual</a>.
+                                                na área de trabalho do Mapler. Em um fluxograma, você só pode ter um elemento ínicio e um elemento fim, conforme nosso <a href="/manuais#VisaoGeral">Manual</a>.
                                                 Em futuras versões, pretendemos criar uma aviso de revisão ao usuário quando o mesmo tentar esta ação.
                                             </p>
                                         </div>
@@ -196,14 +194,13 @@
                 <div id="collapseExercicios" class="accordion-collapse collapse " aria-labelledby="headingExercicios" data-bs-parent="#accordionExercicios">
                     <div class="accordion-body">
                         <p>Pensando em nossos usuários, elaboramos exercícios com resolução em portugol e em fluxograma, além de explicarmos os elementos utilizados nos exercícios propostos!</p>
-                        <a href="https://portugol.sourceforge.io/fluxograma/geral.html"><button class="btn btn-light">Exercícios</button></a>
+                        <a href="ajuda/fluxograma/geral"><button class="btn btn-light">Exercícios</button></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
-        !-- Footer -->
         <!-- Rodape -->
         <footer th:replace="fragmentos/footer.html"></footer>
 
