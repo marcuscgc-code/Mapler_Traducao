@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragmentos/head.html"></head>
+
+<body>
+<header th:replace="fragmentos/header.html"></header>
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <!-- Menu -->
+        <!-- Menu -->
+        <div class="accordion mb-3" id="accordionExamplos">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingExemplos">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplos" aria-expanded="true" aria-controls="collapseExemplos">
+                        Sobre o Diagrama
+                    </button>
+                </h2>
+                <div id="collapseExemplos" class="accordion-collapse collapse show" aria-labelledby="headingExemplos" data-bs-parent="#accordionExamplos">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-12 col-sm">
+                                <div class="row pb-1 mb-2">
+                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/geral.html">Estrutura do
+                                        Diagrama</a></div>
+                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/entrada-saida.html">Entrada e Saída</a>
+                                    </div>
+                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/lacos.html">Laços de repetição</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-sm">
+                                <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/fluxograma/pontoscontrole.html">Pontos de
+                                    controle</a>
+                                <ul>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/pontoscontrole.html">Inicio</a></li>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/pontoscontrole.html">Fim</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-sm">
+                                <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Figuras</a>
+                                <ul>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Entrada</a></li>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Saída</a></li>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Condição</a></li>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Processamento</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-sm">
+                                <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/fluxograma/eventos.html">Eventos</a>
+                                <ul>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/eventos.html">Mover</a></li>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/eventos.html">Associar</a></li>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/eventos.html">Remover</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content -->
+
+        <!-- Secao principal -->
+        <section>
+            <div class="mt-4">
+                <!-- Visao Geral -->
+                <section id="VisaoGeral">
+                    <!-- Descrição rapida -->
+                    <!-- <hr class="mt-5"> -->
+                    <div id="geral">
+                        <h2 class="rosa">Exemplo</h2>
+                        <figure class="figure">
+                            <figcaption class="figure-caption">Este é um exemplo de fluxograma com início e fim.</figcaption>
+                            <img src="https://portugol.sourceforge.io/assets/images/fluxograma/saida-entrada.png" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
+                        </figure>
+                        <p>
+                            O fluxograma sempre inicia na figura 'Início' e termina na figura 'Fim'. Entre essas duas figuras, estão representadas outras formas que descrevem a lógica usada pelo fluxograma para resolver o algoritmo.                            </p>
+                    </div>
+
+                    <div class="accordion mb-3" id="accordion-fig">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#figuras" aria-expanded="true">
+                                Sobre as figuras
+                            </button>
+                        </h5>
+                        <div id="figuras" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div id="inicio">
+                                    <h2 class="rosa">Início</h2>
+                                    <figure class="figure">
+                                        <figcaption class="figure-caption">Representação da figura Início</figcaption>
+                                        <img src="https://portugol.sourceforge.io/assets/images/fluxograma/figuras/inicio.png" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
+                                    </figure>
+                                    <p>
+                                        O ponto de partida do fluxograma é simbolizado pela figura de início, que representa o ponto inicial do algoritmo. Essa figura é sempre utilizada como o ponto de partida lógico para o desenvolvimento do processo.
+                                    </p>
+                                </div>
+                                <div id="fim">
+                                    <h2 class="rosa">Fim</h2>
+                                    <figure class="figure">
+                                        <figcaption class="figure-caption">Representação da figura Fim</figcaption>
+                                        <img src="https://portugol.sourceforge.io/assets/images/fluxograma/figuras/fim.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                    </figure>
+                                    <p>
+                                        A figura de encerramento, representada como 'Fim', sinaliza o término do programa. Quando a lógica alcança este ponto, o código é finalizado.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+    </div>
+</main>
+<!-- Rodape -->
+<footer th:replace="fragmentos/footer.html"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

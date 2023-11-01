@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragmentos/head.html"></head>
+
+<body>
+<header th:replace="fragmentos/header.html"></header>
+
+<main>
+    <div class="container py-5 px-3 pt-3 px-sm-5">
+        <!-- Menu -->
+        <div class="accordion mb-3" id="accordionExamplos">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingExemplos">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplos" aria-expanded="true" aria-controls="collapseExemplos">
+                        Sobre o Diagrama
+                    </button>
+                </h2>
+                <div id="collapseExemplos" class="accordion-collapse collapse show" aria-labelledby="headingExemplos" data-bs-parent="#accordionExamplos">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-12 col-sm">
+                                <div class="row pb-1 mb-2">
+                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/geral.html">Estrutura do
+                                        Diagrama</a></div>
+                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/entrada-saida.html">Entrada e Saída</a>
+                                    </div>
+                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/lacos.html">Laços de repetição</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-sm">
+                                <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/fluxograma/pontoscontrole.html">Pontos de
+                                    controle</a>
+                                <ul>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/pontoscontrole.html">Inicio</a></li>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/pontoscontrole.html">Fim</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-sm">
+                                <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Figuras</a>
+                                <ul>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Entrada</a></li>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Saída</a></li>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Condição</a></li>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Processamento</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-sm">
+                                <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/fluxograma/eventos.html">Eventos</a>
+                                <ul>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/eventos.html">Mover</a></li>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/eventos.html">Associar</a></li>
+                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/eventos.html">Remover</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content -->
+
+        <!-- Secao principal -->
+        <section>
+            <div class="mt-4">
+                <!-- Visao Geral -->
+                <section id="VisaoGeral">
+                    <!-- Descrição rapida -->
+                    <!-- <hr class="mt-5"> -->
+
+                    <p>
+                        No software Mapler, a criação e edição de fluxogramas são facilitadas por um conjunto de três botões essenciais que desempenham funções específicas:
+                    </p>
+
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#mover" aria-expanded="mover">
+                                Mover
+                            </button>
+                        </h5>
+                        <div id="mover" class="accordion-collapse collapse">
+                            <h5 class="rosa">Função</h5>
+                            <p>O botão 'Mover' é projetado para permitir o deslocamento de elementos individuais do fluxograma para diferentes posições dentro do diagrama.</p>
+                            <h5 class="rosa">Utilização</h5>
+                            <p>Isso é particularmente útil quando se deseja ajustar a disposição dos elementos, organizar o fluxo lógico de maneira mais clara ou reposicionar caixas de decisão, entrada, saída ou outras figuras conforme necessário.</p>
+                        </div>
+                    </div>
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#associar" aria-expanded="associar">
+                                Associar
+                            </button>
+                        </h5>
+                        <div id="associar" class="accordion-collapse collapse">
+                            <h5 class="rosa">Função</h5>
+                            <p>O botão 'Associar' tem como finalidade estabelecer conexões entre os elementos do fluxograma, criando linhas ou setas que representam a sequência lógica das operações.</p>
+                            <h5 class="rosa">Utilização</h5>
+                            <p>Ao clicar no botão 'Associar' e selecionar duas figuras no fluxograma, você pode criar uma linha que indica a relação entre esses elementos, ajudando a definir a ordem de execução das ações no algoritmo.</p>
+                        </div>
+                    </div>
+                    <div class="accordion mb-3">
+                        <h5 class="accordion-header">
+                            <button class="accordion-button custom-icon" type="button" data-bs-toggle="collapse" data-bs-target="#remover" aria-expanded="remover">
+                                Remover
+                            </button>
+                        </h5>
+                        <div id="remover" class="accordion-collapse collapse">
+                            <h5 class="rosa">Função</h5>
+                            <p>O botão 'Remover' permite a exclusão de elementos indesejados do fluxograma, como figuras ou conexões entre elas.</p>
+                            <h5 class="rosa">Utilização</h5>
+                            <p>Ao clicar no botão 'Associar' e selecionar duas figuras no fluxograma, você pode criar uma linha que indica a relação entre esses elementos, ajudando a definir a ordem de execução das ações no algoritmo.</p>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </section>
+
+    </div>
+</main>
+<!-- Rodape -->
+<footer th:replace="fragmentos/footer.html"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
