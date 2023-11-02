@@ -8,62 +8,7 @@
 
 <main>
     <div class="container py-5 px-3 pt-3 px-sm-5">
-        <!-- Menu -->
-        <div class="accordion mb-3" id="accordionExamplos">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingExemplos">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplos" aria-expanded="true" aria-controls="collapseExemplos">
-                        Sobre o Diagrama
-                    </button>
-                </h2>
-                <div id="collapseExemplos" class="accordion-collapse collapse show" aria-labelledby="headingExemplos" data-bs-parent="#accordionExamplos">
-                    <div class="accordion-body">
-                        <div class="row">
-                            <div class="col-12 col-sm">
-                                <div class="row pb-1 mb-2">
-                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/geral.html">Estrutura do
-                                        Diagrama</a></div>
-                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/entrada-saida.html">Entrada e Saída</a>
-                                    </div>
-                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/lacos.html">Laços de repetição</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-sm">
-                                <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/fluxograma/pontoscontrole.html">Pontos de
-                                    controle</a>
-                                <ul>
-                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/pontoscontrole.html">Inicio</a></li>
-                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/pontoscontrole.html">Fim</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="col-6 col-sm">
-                                <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Figuras</a>
-                                <ul>
-                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Entrada</a></li>
-                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Saída</a></li>
-                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Condição</a></li>
-                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/figuras.html">Processamento</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="col-6 col-sm">
-                                <a class="link-light text-decoration-none fw-bold fs-6" href="https://portugol.sourceforge.io/fluxograma/eventos.html">Eventos</a>
-                                <ul>
-                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/eventos.html">Mover</a></li>
-                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/eventos.html">Associar</a></li>
-                                    <li><a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/fluxograma/eventos.html">Remover</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Content -->
-
+        <div th:replace="fragmentos/menu-ajuda-fluxograma.html"></div>
         <!-- Secao principal -->
         <section>
             <div class="mt-4">
