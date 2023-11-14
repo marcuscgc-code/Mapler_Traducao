@@ -1,24 +1,16 @@
-.collapsible {
-            background-color: #777;
-            color: white;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-        }
+div#application, div#content{
+    width: 100%;
+    height: 100%;
+}
 
-        .active,
-        .collapsible:hover {
-            background-color: rgb(255, 255, 255);
-            color: black;
-        }
+.gutter{
+    background-color: rgb(52, 58, 64);
+}
 
-        .content {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
-            background-color: #292929;
-        }
+div#content div#codigos .gutter{
+    cursor: e-resize;
+}
+
+div#content .gutter{
+    cursor: s-resize;
+}    }
