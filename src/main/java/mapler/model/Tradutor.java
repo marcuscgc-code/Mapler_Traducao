@@ -9,7 +9,6 @@ import interpretador.LeitorEntradaConsole;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Tradutor implements AcaoInterpretador{
-
     private String status;
     private String traducao;
 
@@ -32,7 +31,7 @@ public class Tradutor implements AcaoInterpretador{
     public void ativar(String codigo){
         this.status = "TRUE";
         try{
-            this.traducao = interpretadorService.traduzirDoTexto(codigo, ConversorStrategy.C);
+            this.traducao = interpretadorService.traduzirDoTexto(codigo, ConversorStrategy.JAVA);
         }catch (Exception e){
             this.traducao = e.toString();
             System.out.println("Erro ao traduzir.");

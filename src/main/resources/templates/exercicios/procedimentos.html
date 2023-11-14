@@ -12,48 +12,14 @@
 <main>
     <div class="container py-5 px-3 pt-3 px-sm-5">
         <!-- Menu -->
-        <div class="accordion mb-3" id="accordionExamplos">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingExemplos">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplos" aria-expanded="true" aria-controls="collapseExemplos">
-                        Níveis e categorias de exercícios
-                    </button>
-                </h2>
-                <div id="collapseExemplos" class="accordion-collapse collapse show" aria-labelledby="headingExemplos" data-bs-parent="#accordionExamplos">
-                    <div class="accordion-body">
-                        <div class="row">
-                            <div class="col-12 col-sm">
-                                <div class="row pb-1 mb-2"> <!--talvez implementar níveis nas questões-->
-                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exercicios/sequenciais.html#VisaoGeral">Estruturas Sequenciais</a></div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm">
-                                <div class="row pb-1 mb-2">
-                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exercicios/decisoes.html#VisaoGeral">Estruturas de Decisão</a></div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm">
-                                <div class="row pb-1 mb-2">
-                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exercicios/repeticoes.html#VisaoGeral">Estruturas de Repetição</a></div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm">
-                                <div class="row pb-1 mb-2">
-                                    <div class="col col-sm-12 mb-sm-2 fw-bold fs-6 text-center text-sm-start"> <a class="link-light text-decoration-none" href="https://portugol.sourceforge.io/exercicios/procedimentos.html#VisaoGeral">Procedimentos</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div th:replace="fragmentos/menu-hubexercicios.html"></div>
         <!-- Content -->
 
         <!-- Secao principal -->
         <section id="VisaoGeral">
             <div class="mt-4">
                 <h1>Procedimentos</h1>
-                <p><a class="rosa" href="https://portugol.sourceforge.io/exemplos/modulos.html#VisaoGeral" target="_blank">Módulos</a>:</p>
+                <p><a class="rosa" href="/exemplo/portugol/modulos#VisaoGeral" target="_self">Módulos</a>:</p>
                 <ul>
                     <li>Um módulo executa uma tarefa específica ou ação.</li>
                     <li>São úteis quando você precisa realizar a mesma tarefa em várias partes do seu código, evitando a duplicação de código.</li>
@@ -342,36 +308,7 @@
 
 <!-- Footer -->
 <!-- Rodape -->
-<footer class="container-fluid p-5">
-    <!-- Logo do Mapler versao branca -->
-    <img src="https://portugol.sourceforge.io/assets/images/logo-branco.png" alt="Logo Branco do Mapler" width="100px" class="mb-3">
-
-    <!-- Informações de Copyright e Atualização -->
-    <p>
-        <em>Copyright &copy; 2006-2023</em> Projeto
-        <strong> Mapler</strong> - Interpretador Portugol. Última atualização: Setembro/2023.
-    </p>
-
-    <!-- Link para a página do projeto no sourceforge -->
-    <p>
-        Página do Projeto:
-        <a href="https://sourceforge.net/projects/portugol/" target="_blank" rel="noopener noreferrer" class="text-light">
-            <strong>sourceforge.net/projects/portugol</strong>
-        </a>.
-    </p>
-
-    <!-- Desenvolvedores do site + link para o GitHub de cada um. -->
-    <p>
-        Site desenvolvido por
-        <a href="https://github.com/DavidGomesh" target="_blank" rel="noopener noreferrer" class="text-light">
-            <strong>David Gomesh</strong>
-        </a>
-        e
-        <a href="https://github.com/EliasRLima" target="_blank" rel="noopener noreferrer" class="text-light">
-            <strong>Elias Lima</strong>
-        </a>.
-    </p>
-</footer>
+<footer th:replace="fragmentos/footer.html"></footer>
 <!-- JS -->
 <!-- Bootstrap 5 Bundle Core -->
 <script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script>
