@@ -6,7 +6,6 @@ import debug.EstadoDebug;
 import interpretador.AcaoInterpretador;
 import interpretador.InterpretadorService;
 import interpretador.LeitorEntradaConsole;
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class Tradutor implements AcaoInterpretador{
     private String status;
@@ -24,7 +23,7 @@ public class Tradutor implements AcaoInterpretador{
         return status;
     }
 
-    private void setStatus(String status) {
+    public void setStatus(String status){
         this.status = status;
     }
 
