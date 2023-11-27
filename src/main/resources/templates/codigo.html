@@ -1,4 +1,4 @@
-<html lang="en" xmlns:th="">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -8,13 +8,13 @@
     <meta name="keywords" content="MAPLER, MACP, MA, CP, interpretador ,compilador, portugol, maranhão, brasil, programação, programacao, desenvolvimento, algoritmo">
     <meta name="robots" content="INDEX,FOLLOW" />
 
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/codigo.css">
-    <link rel="stylesheet" href="/static/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="/codemirror-5.65.2/lib/codemirror.css">
-    <link rel="stylesheet" href="/codemirror-5.65.2/theme/dracula.css">
-    <link rel="stylesheet" href="/static/css/mapler-web.css">
-    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{css/codigo.css}">
+    <link rel="stylesheet" th:href="@{css/font-awesome/css/all.min.css}">
+    <link rel="stylesheet" th:href="@{/codemirror-5.65.2/lib/codemirror.css}">
+    <link rel="stylesheet" th:href="@{/codemirror-5.65.2/theme/dracula.css}">
+    <link rel="stylesheet" th:href="@{/css/mapler-web.css}">
+    <link rel="shortcut icon" th:href="@{images/favicon.ico}" type="image/x-icon">
     <title>Mapler Web</title>
 </head>
 
@@ -148,15 +148,15 @@ fim modulo;
 </div>
 <footer th:replace="fragmentos/footer.html"></footer>
 
-<script src="/static/js/bootstrap.bundle.min.js"></script>
-<script src="/static/js/codigo.js"></script>
-<script src="/static/font-awesome/js/all.min.js"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/codigo.js}"></script>
+<script th:src="@{/font-awesome/js/all.min.js}"></script>
 
-<script src="/codemirror-5.65.2/lib/codemirror.js"></script>
-<script src="/codemirror-5.65.2/mode/javascript/javascript.js"></script>
-<script src="/codemirror-5.65.2/addon/edit/closebrackets.js"></script>
-<script src="/codemirror-5.65.2/addon/edit/matchbrackets.js"></script>
-<script src="/codemirror-5.65.2/addon/comment/comment.js"></script>
+<script th:src="@{/codemirror-5.65.2/lib/codemirror.js}"></script>
+<script th:src="@{/codemirror-5.65.2/mode/javascript/javascript.js}"></script>
+<script th:src="@{/codemirror-5.65.2/addon/edit/closebrackets.js}"></script>
+<script th:src="@{/codemirror-5.65.2/addon/edit/matchbrackets.js}"></script>
+<script th:src="@{/codemirror-5.65.2/addon/comment/comment.js}"></script>
 
 <script>
     const editor = CodeMirror.fromTextArea(
