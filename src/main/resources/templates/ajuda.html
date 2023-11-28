@@ -62,7 +62,7 @@
                                     <div class="accordion-body">
                                         <div class="mb-3">
                                             <p>Com um software de extração de arquivos compactados, extraia o conteúdo e abra o executável <i>Mapler-executavel.jar</i>, como na imagem abaixo:</p>
-                                            <img src="https://portugol.sourceforge.io/assets/images/bugs/abertura_mapler.png" width="100%" alt="Abertura do Mapler">
+                                            <img th:src="@{/images/ajuda/abertura_mapler.png}" width="100%" alt="Abertura do Mapler">
                                         </div>
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@
                                             <p>Uma vez aberto, o debugger, que é a ferramenta para depuração e correção de erros, não possui nenhum ícone indicativo para fechá-lo.
                                                 Para tal, apenas clique novamente no ícone do Debugger,como na imagem abaixo, que a janela será fechada.
                                             </p>
-                                            <img src="https://portugol.sourceforge.io/assets/images/bugs/fecha_debug.png" width="100%" alt="Fechar janela do Debug">
+                                            <img th:src="@{/images/ajuda/fecha_debug.png}" width="100%" alt="Fechar janela do Debug">
                                         </div>
                                     </div>
                                 </div>
@@ -121,7 +121,7 @@
                                                 a menos que possua certeza que já salvou as alterações em seu projeto.
                                             </p>
                                             <figure>
-                                                <img src="https://portugol.sourceforge.io/assets/images/bugs/fecha_programa_direto.png" alt="Ícones que fecham o Mapler direto">
+                                                <img th:src="@{/images/ajuda/fecha_programa_direto.png}" alt="Ícones que fecham o Mapler direto">
                                                 <figcaption>NÃO utilize estes ícones sem ter salvo o progesso no projeto previamente!</figcaption>
                                             </figure>
                                         </div>
@@ -144,11 +144,11 @@
                                                 centralizadas entre os itens, a forma correta e esperada de exibição.
                                             </p>
                                             <figure class="bug-linhas-associacao ">
-                                                <img src="https://portugol.sourceforge.io/assets/images/bugs/linhas_desajustadas.png" alt="Linhas de associação desajustadas">
+                                                <img th:src="@{/images/ajuda/linhas_desajustadas.png}" alt="Linhas de associação desajustadas">
                                                 <figcaption>Fluxograma ao ser aberto</figcaption>
                                             </figure>
                                             <figure class="bug-linhas-associacao">
-                                                <img src="https://portugol.sourceforge.io/assets/images/bugs/linhas_ajustadas.png" alt="Linhas de assoiação ajustadas">
+                                                <img th:src="@{/images/ajuda/linhas_ajustadas.png}" alt="Linhas de assoiação ajustadas">
                                                 <figcaption>Fluxograma ajustado</figcaption>
                                             </figure>
                                         </div>
@@ -172,7 +172,7 @@
                                                     acontecer, apenas feche o arquivo e o abra com o tipo correto.</strong>
                                             </p>
                                             <figure>
-                                                <img src="https://portugol.sourceforge.io/assets/images/bugs/abertura_errada.png" alt="Arquivo aberto em tipo inválido!">
+                                                <img th:src="@{/images/ajuda/abertura_errada.png}" alt="Arquivo aberto em tipo inválido!">
                                                 <figcaption>Exemplo de arquivo aberto incorretamente!</figcaption>
                                             </figure>
                                         </div>
@@ -201,12 +201,11 @@
         </div>
     </div>
 </main>
-        <!-- Rodape -->
-        <footer th:replace="fragmentos/footer.html"></footer>
+<!-- Rodape -->
+<footer th:replace="fragmentos/footer.html"></footer>
 
 <!-- JS -->
 <!-- Bootstrap 5 Bundle Core -->
-<script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script>
-</body>
+<script th:src="@{js/bootstrap.bundle.min.js}"></script></body>
 
 </html>

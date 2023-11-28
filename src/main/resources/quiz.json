@@ -21,7 +21,7 @@
       "<>",
       "=",
       "!=",
-      "!==",
+      "==",
       "<="
   ],
   "correct": "=",
@@ -58,7 +58,7 @@
 },
 {
   "id": 6,
-  "question": "Em programação, qual é o termo utilizado para nomear um bloco de código que pode ser reutilizado em diferentes partes de um programa em Portugol?",
+  "question": "Em Portugol, qual é o termo utilizado para nomear um bloco de código que pode ser reutilizado em diferentes partes de um programa em Portugol?",
   "answers": [
       "modulo",
       "classe",
@@ -72,7 +72,7 @@
 },
 {
   "id": 7,
-  "question": "Em Portugol, para interromper a execução de um loop de repetição, qual comando pode ser utilizado?",
+  "question": "No portugol do MAPLER, para interromper a execução de um loop de repetição, qual comando pode ser utilizado?",
   "answers": [
       "para",
       "pare-aqui",
@@ -109,7 +109,7 @@
           "Um algoritmo é um tipo específico de linguagem de programação"
       ],
       "correct": "Um algoritmo é uma sequência finita de instruções bem definidas para resolver um problema",
-      "link" : "",
+      "link" : "https://tecnoblog.net/responde/o-que-e-algoritmo/",
       "image": "" 
   },
   {
@@ -123,7 +123,7 @@
       ],
       "correct": "Uma instrução que executa um bloco de código repetidamente até que uma condição seja atendida",
       "link" : "",
-      "image": "" 
+      "image": "/exemplo/portugol/lacos" 
   },
   {
       "id": 11,
@@ -136,7 +136,7 @@
       ],
       "correct": "Um laço 'para' tem um número pré-definido de vezes que será executado, enquanto um laço 'enquanto' verifica condições",
       "link" : "",
-      "image": "" 
+      "image": "/exemplo/portugol/lacos" 
   },
   {
       "id": 12,
@@ -148,7 +148,7 @@
           "Um loop de repetição condicional"
       ],
       "correct": "Uma instrução que executa um bloco de código se uma condição for verdadeira",
-      "link" : "",
+      "link" : "/exemplo/portugol/condicionais#Se",
       "image": ""
   },
   {
@@ -161,7 +161,7 @@
           "Um sistema de lógica que lida com dois valores: verdadeiro e falso"
       ],
       "correct": "Um sistema de lógica que lida com dois valores: verdadeiro e falso",
-      "link" : "",
+      "link" : "https://www.tecmundo.com.br/programacao/1527-logica-booleana-saiba-um-pouco-mais-sobre-esta-logica-e-como-ela-funciona.htm",
       "image": ""
   },
   {
@@ -174,7 +174,7 @@
           "Uma função que não retorna valor"
       ],
       "correct": "Uma instrução que é executada caso a condição de um 'if' não seja atendida",
-      "link" : "",
+      "link" : "/exemplo/portugol/condicionais#Senao",
       "image": ""
   },
   {
@@ -192,16 +192,16 @@
   },
   {
       "id": 16,
-      "question": "O que é um algoritmo?",
+      "question": "Escolha a opção em que o x é incializado com o valor 10 corretamente no portugol:",
       "answers": [
-          "Um algoritmo é uma sequência finita de instruções bem definidas para resolver um problema",
-          "É um conjunto de passos aleatórios para solucionar um problema específico",
-          "Define uma série de problemas para uma solução complexa",
-          "Consiste em uma única instrução para solucionar qualquer problema computacional",
-          "Um algoritmo é um tipo específico de linguagem de programação"
+          "x -> 10;",
+          "10 <- x",
+          "x = 10;",
+          "x <- 10;",
+          "x <- 10"
       ],
       "correct": "Um algoritmo é uma sequência finita de instruções bem definidas para resolver um problema",
-      "link" : "",
+      "link" : "/exemplo/portugol/tipos#Numericos",
       "image": ""
   },
   {
@@ -215,7 +215,7 @@
           "O código possui um erro de lógica"
       ],
       "correct": "x é menor que y",
-      "link" : "",
+      "link" : "/exemplo/portugol/operacoes",
       "image": "imagem_id_17.png"
   }
 ]
