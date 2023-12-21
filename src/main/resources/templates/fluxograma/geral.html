@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:replace="fragmentos/head.html"></head>
+<head th:replace="@{/fragmentos/head.html}"></head>
 
 <body>
-<header th:replace="fragmentos/header.html"></header>
+<header th:replace="@{/fragmentos/header.html}"></header>
 <main>
     <div class="container py-5 px-3 pt-3 px-sm-5">
-        <div th:replace="fragmentos/menu-ajuda-fluxograma.html"></div>
+        <div th:replace="@{/fragmentos/menu-ajuda-fluxograma.html}"></div>
         <!-- Secao principal -->
         <section>
             <div class="mt-4">
@@ -25,7 +25,7 @@
                             <div id="inicio">
                                 <figure class="figure">
                                     <figcaption class="figure-caption">Representação da figura Início</figcaption>
-                                    <img src="https://portugol.sourceforge.io/assets/images/fluxograma/figuras/fig-inicio.png" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
+                                    <img th:src="@{/images/fluxograma/fig-inicio.png}" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
                                 </figure>
                                 <p>
                                     O ponto de partida do fluxograma é simbolizado pela figura de início, que representa o ponto inicial do algoritmo. Essa figura é sempre utilizada como o ponto de partida lógico para o desenvolvimento do processo.
@@ -43,7 +43,7 @@
                             <div id="fim">
                                 <figure class="figure">
                                     <figcaption class="figure-caption">Representação da figura Fim</figcaption>
-                                    <img src="https://portugol.sourceforge.io/assets/images/fluxograma/figuras/fig-fim.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                    <img th:src="@{/images/fluxograma/fig-fim.png}" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                                 </figure>
                                 <p>
                                     A figura de encerramento, representada como 'Fim', sinaliza o término do programa. Quando a lógica alcança este ponto, o código é finalizado.
@@ -61,7 +61,7 @@
                             <div id="entrada">
                                 <figure class="figure">
                                     <figcaption class="figure-caption">Representação da figura Entrada</figcaption>
-                                    <img src="https://portugol.sourceforge.io/assets/images/fluxograma/figuras/fig-entrada.png" class="figure-img img-fluid rounded" alt="Uma figura de entrada.">
+                                    <img th:src="@{/images/fluxograma/fig-entrada.png}" class="figure-img img-fluid rounded" alt="Uma figura de entrada.">
                                 </figure>
                                 <p>
                                     O símbolo 'Entrada' indica que o usuário deve fornecer um valor, o qual o algoritmo irá ler e armazenar em uma variável. Essa figura é utilizada para solicitar que o usuário insira informações essenciais para o prosseguimento do algoritmo.
@@ -79,7 +79,7 @@
                             <div id="saida">
                                 <figure class="figure">
                                     <figcaption class="figure-caption">Representação da figura Saída</figcaption>
-                                    <img src="https://portugol.sourceforge.io/assets/images/fluxograma/figuras/fig-saida.png" class="figure-img img-fluid rounded" alt="Uma figura de saida.">
+                                    <img th:src="@{/images/fluxograma/fig-saida.png}" class="figure-img img-fluid rounded" alt="Uma figura de saida.">
                                 </figure>
                                 <p>
                                     O símbolo 'Saída' representa a forma como o algoritmo se comunica com o usuário do sistema, exibindo informações no terminal ou visor. Geralmente, é usado para que o sistema compartilhe resultados ou mensagens importantes com o usuário, facilitando a interação entre ambos.
@@ -98,7 +98,7 @@
                             <div id="processamento">
                                 <figure class="figure">
                                     <figcaption class="figure-caption">Representação da figura processamento</figcaption>
-                                    <img src="https://portugol.sourceforge.io/assets/images/fluxograma/figuras/fig-processamento.png" class="figure-img img-fluid rounded" alt="Uma figura de processamento.">
+                                    <img th:src="@{/images/fluxograma/fig-processamento.png}" class="figure-img img-fluid rounded" alt="Uma figura de processamento.">
                                 </figure>
                                 <p>
                                     O símbolo 'Processamento' engloba as figuras relacionadas a cálculos e alterações de valores no fluxograma. É usado para representar ações como atribuições, operações matemáticas e outras interações com variáveis, indicando o processamento de dados e informações dentro do algoritmo.
@@ -116,7 +116,7 @@
                             <div id="decisao">
                                 <figure class="figure">
                                     <figcaption class="figure-caption">Representação da figura decisão</figcaption>
-                                    <img src="https://portugol.sourceforge.io/assets/images/fluxograma/figuras/fig-decisao.png" class="figure-img img-fluid rounded" alt="Uma figura de decisao.">
+                                    <img th:src="@{/images/fluxograma/fig-decisao.png}" class="figure-img img-fluid rounded" alt="Uma figura de decisao.">
                                 </figure>
                                 <p>
                                     A figura 'Decisão' é a única no fluxograma que pode ter dois caminhos saindo dela. Um valor, que pode ser configurado automaticamente ou pelo desenvolvedor, é definido para determinar qual caminho será percorrido com base no resultado da condição presente na decisão.
@@ -133,10 +133,10 @@
 </main>
 
 <!-- Rodape -->
-<footer th:replace="fragmentos/footer.html"></footer>
+<footer th:replace="@{/fragmentos/footer.html}"></footer>
 <!-- JS -->
 <!-- Bootstrap 5 Bundle Core -->
-<script th:src="@{js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
 
 </html>

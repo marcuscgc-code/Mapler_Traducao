@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:replace="fragmentos/head.html"></head>
+<head th:replace="@{/fragmentos/head.html}"></head>
 
 <body>
-<header th:replace="fragmentos/header.html"></header>
+<header th:replace="@{/fragmentos/header.html}"></header>
 
 <!-- Corpo principal do site -->
 <main>
     <div class="container py-5 px-3 pt-3 px-sm-5">
-        <div th:replace="fragmentos/menu-ajuda-fluxograma.html"></div>
+        <div th:replace="@{/fragmentos/menu-ajuda-fluxograma.html}"></div>
 
         <!-- Secao principal -->
         <section>
@@ -22,7 +22,7 @@
                         <h2 class="rosa">Exemplo</h2>
                         <figure class="figure">
                             <figcaption class="figure-caption">Este é um exemplo de fluxograma com entrada e saída.</figcaption>
-                            <img src="https://portugol.sourceforge.io/assets/images/fluxograma/exemplo.png" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
+                            <img th:src="@{/images/fluxograma/exemplo.png}" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
                         </figure>
                         <p>
                             Em resumo, as figuras de entrada e saída são elementos essenciais em fluxogramas, permitindo que os algoritmos interajam com os usuários, recebendo entradas e fornecendo saídas, tornando o processo de resolução de problemas ou execução de tarefas mais interativo e compreensível.
@@ -41,7 +41,7 @@
                                     <h2 class="rosa">Entrada</h2>
                                     <figure class="figure">
                                         <figcaption class="figure-caption">Representação da figura Entrada</figcaption>
-                                        <img src="https://portugol.sourceforge.io/assets/images/fluxograma/figuras/fig-entrada.png" class="figure-img img-fluid rounded" alt="Uma figura de entrada.">
+                                        <img th:src="@{/images/fluxograma/fig-entrada.png}" class="figure-img img-fluid rounded" alt="Uma figura de entrada.">
                                     </figure>
                                     <p>
                                         O símbolo 'Entrada' indica que o usuário deve fornecer um valor, o qual o algoritmo irá ler e armazenar em uma variável. Essa figura é utilizada para solicitar que o usuário insira informações essenciais para o prosseguimento do algoritmo.
@@ -51,7 +51,7 @@
                                     <h2 class="rosa">Saída</h2>
                                     <figure class="figure">
                                         <figcaption class="figure-caption">Representação da figura Saída</figcaption>
-                                        <img src="https://portugol.sourceforge.io/assets/images/fluxograma/figuras/fig-saida.png" class="figure-img img-fluid rounded" alt="Uma figura de saida.">
+                                        <img th:src="@{/images/fluxograma/fig-saida.png}" class="figure-img img-fluid rounded" alt="Uma figura de saida.">
                                     </figure>
                                     <p>
                                         O símbolo 'Saída' representa a forma como o algoritmo se comunica com o usuário do sistema, exibindo informações no terminal ou visor. Geralmente, é usado para que o sistema compartilhe resultados ou mensagens importantes com o usuário, facilitando a interação entre ambos.
@@ -61,18 +61,15 @@
                         </div>
                     </div>
                 </section>
-
-
             </div>
         </section>
-
     </div>
 </main>
 <!-- Rodape -->
-<footer th:replace="fragmentos/footer.html"></footer>
+<footer th:replace="@{/fragmentos/footer.html}"></footer>
 <!-- JS -->
 <!-- Bootstrap 5 Bundle Core -->
-<script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
 
 </html>

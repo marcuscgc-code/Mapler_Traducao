@@ -2,18 +2,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragmentos/head.html"></head>
+<head th:replace="@{/fragmentos/head.html}"></head>
 <body>
 
 <!-- Header -->
 <!-- Cabecalho -->
-<header th:replace="fragmentos/header.html"></header>
+<header th:replace="@{/fragmentos/header.html}"></header>
 
 <!-- Corpo principal do site -->
 <main>
     <div class="container py-5 px-3 pt-3 px-sm-5">
         <!-- Menu -->
-        <div th:replace="fragmentos/menu-hubexercicios.html"></div>
+        <div th:replace="@{/fragmentos/menu-hubexercicios.html}"></div>
         <!-- Content -->
 
         <!-- Secao principal -->
@@ -52,7 +52,7 @@
                                         <h3 class="mt-4">Fluxograma</h3>
                                         <hr>
                                         <figure class="figure">
-                                            <img src="https://portugol.sourceforge.io/assets/images/exercicios/sequencial/questao1.png" class="rounded float-left" alt="resolução da questão 1 com fluxogramas">
+                                            <img th:src="@{/images/exercicios/sequencial/questao1.png}" class="rounded float-left" alt="resolução da questão 1 com fluxogramas">
                                         </figure>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@
                                             <h3 class="mt-4">Fluxograma</h3>
                                             <hr>
                                             <figure class="figure">
-                                                <img src="https://portugol.sourceforge.io/assets/images/exercicios/sequencial/questao2.png" class="rounded float-left" alt="resolução da questão 2 com fluxogramas">
+                                                <img th:src="@{/images/exercicios/sequencial/questao2.png}" class="rounded float-left" alt="resolução da questão 2 com fluxogramas">
                                             </figure>
                                         </div>
                                     </div>
@@ -132,7 +132,7 @@
                                             <h3 class="mt-4">Fluxograma</h3>
                                             <hr>
                                             <figure class="figure">
-                                                <img src="https://portugol.sourceforge.io/assets/images/exercicios/sequencial/questao3.png" class="rounded float-left" alt="resolução da questão 3 com fluxogramas">
+                                                <img th:src="@{/images/exercicios/sequencial/questao3.png}" class="rounded float-left" alt="resolução da questão 3 com fluxogramas">
                                             </figure>
                                         </div>
                                     </div>
@@ -185,7 +185,7 @@
                                             <h3 class="mt-4">Fluxograma</h3>
                                             <hr>
                                             <figure class="figure">
-                                                <img src="https://portugol.sourceforge.io/assets/images/exercicios/sequencial/questao4.png" class="rounded float-left" alt="resolução da questão 4 com fluxogramas">
+                                                <img th:src="@{/images/exercicios/sequencial/questao4.png}" class="rounded float-left" alt="resolução da questão 4 com fluxogramas">
                                             </figure>
                                         </div>
                                         <div class="alert alert-warning" role="alert">
@@ -233,7 +233,7 @@
                                             <h3 class="mt-4">Fluxograma</h3>
                                             <hr>
                                             <figure class="figure">
-                                                <img src="https://portugol.sourceforge.io/assets/images/exercicios/sequencial/questao5.png" class="rounded float-left" alt="resolução da questão 5 com fluxogramas">
+                                                <img th:src="@{/images/exercicios/sequencial/questao5.png}" class="rounded float-left" alt="resolução da questão 5 com fluxogramas">
                                             </figure>
                                         </div>
                                     </div>
@@ -244,16 +244,15 @@
                 </section>
             </div>
         </section>
-
     </div>
 </main>
 
 <!-- Footer -->
 <!-- Rodape -->
-<footer th:replace="fragmentos/footer.html"></footer>
+<footer th:replace="@{/fragmentos/footer.html}"></footer>
 <!-- JS -->
 <!-- Bootstrap 5 Bundle Core -->
-<script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
 
 </html>

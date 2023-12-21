@@ -45,11 +45,12 @@ public class QuizController {
                 mistakes(0).
                 questionsQuantity(quizzes.size()).
                 percentScore(0.0).
-                wrongAnswers(new ArrayList<Quiz>()).
+                wrongAnswers(new ArrayList<>()).
                 build();
             }
         }
         try{
+            assert quizzes != null;
             this.currentQuiz = quizzes.remove(0);
             mv.addObject("quiz", this.currentQuiz);
         }catch (IndexOutOfBoundsException e){

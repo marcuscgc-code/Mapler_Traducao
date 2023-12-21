@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:replace="fragmentos/head.html"></head>
+<head th:replace="@{/fragmentos/head.html}"></head>
 
 <body>
-<header th:replace="fragmentos/header.html"></header>
+<header th:replace="@{/fragmentos/header.html}"></header>
 <main>
     <div class="container py-5 px-3 pt-3 px-sm-5">
-        <div th:replace="fragmentos/menu-ajuda-fluxograma.html"></div>
+        <div th:replace="@{/fragmentos/menu-ajuda-fluxograma.html}"></div>
         <!-- Secao principal -->
         <section>
             <div class="mt-4">
@@ -19,7 +19,7 @@
                         <h2 class="rosa">Exemplo</h2>
                         <figure class="figure">
                             <figcaption class="figure-caption">Este é um exemplo de fluxograma com início e fim.</figcaption>
-                            <img src="https://portugol.sourceforge.io/assets/images/fluxograma/saida-entrada.png" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
+                            <img th:src="@{/images/fluxograma/saida-entrada.png}" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
                         </figure>
                         <p>
                             O fluxograma sempre inicia na figura 'Início' e termina na figura 'Fim'. Entre essas duas figuras, estão representadas outras formas que descrevem a lógica usada pelo fluxograma para resolver o algoritmo.                            </p>
@@ -37,7 +37,7 @@
                                     <h2 class="rosa">Início</h2>
                                     <figure class="figure">
                                         <figcaption class="figure-caption">Representação da figura Início</figcaption>
-                                        <img src="https://portugol.sourceforge.io/assets/images/fluxograma/figuras/inicio.png" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
+                                        <img th:src="@{/images/fluxograma/inicio.png}" class="rounded float-left" alt="A generic square placeholder image with rounded corners in a figure.">
                                     </figure>
                                     <p>
                                         O ponto de partida do fluxograma é simbolizado pela figura de início, que representa o ponto inicial do algoritmo. Essa figura é sempre utilizada como o ponto de partida lógico para o desenvolvimento do processo.
@@ -47,7 +47,7 @@
                                     <h2 class="rosa">Fim</h2>
                                     <figure class="figure">
                                         <figcaption class="figure-caption">Representação da figura Fim</figcaption>
-                                        <img src="https://portugol.sourceforge.io/assets/images/fluxograma/figuras/fim.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                        <img th:src="@{/images/fluxograma/fim.png}" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                                     </figure>
                                     <p>
                                         A figura de encerramento, representada como 'Fim', sinaliza o término do programa. Quando a lógica alcança este ponto, o código é finalizado.
@@ -59,14 +59,13 @@
                 </section>
             </div>
         </section>
-
     </div>
 </main>
 <!-- Rodape -->
-<footer th:replace="fragmentos/footer.html"></footer>
+<footer th:replace="@{/fragmentos/footer.html}"></footer>
 <!-- JS -->
 <!-- Bootstrap 5 Bundle Core -->
-<script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
 
 </html>

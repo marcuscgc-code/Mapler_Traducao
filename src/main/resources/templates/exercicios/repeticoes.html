@@ -2,17 +2,17 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragmentos/head.html"></head>
+<head th:replace="@{/fragmentos/head.html}"></head>
 <body>
 
 <!-- Header -->
 <!-- Cabecalho -->
-<header th:replace="fragmentos/header.html"></header>
+<header th:replace="@{/fragmentos/header.html}"></header>
 <!-- Corpo principal do site -->
 <main>
     <div class="container py-5 px-3 pt-3 px-sm-5">
         <!-- Menu -->
-        <div th:replace="fragmentos/menu-hubexercicios.html"></div>
+        <div th:replace="@{/fragmentos/menu-hubexercicios.html}"></div>
         <!-- Content -->
 
         <!-- Secao principal -->
@@ -27,10 +27,10 @@
 
 <!-- Footer -->
 <!-- Rodape -->
-<footer th:replace="fragmentos/footer.html"></footer>
+<footer th:replace="@{/fragmentos/footer.html}"></footer>
 <!-- JS -->
 <!-- Bootstrap 5 Bundle Core -->
-<script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
 
 </html>

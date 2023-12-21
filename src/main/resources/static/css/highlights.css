@@ -1,14 +1,22 @@
+
 .pre{
     font-family: "SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New",monospace;
-    /* font-size: 1.25rem; */
     font-weight: 300;
-
     background-color: #202324;
     padding: 1.5rem;
-
     white-space: nowrap;
-    /* overflow: hidden; */
-    /* text-overflow: ellipsis; */
+}
+
+.pre2{
+    font-family: "SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New",monospace;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+/*tamanho da imagem como proporcional*/
+figure img {
+    width: 100%;
+    height: auto;
 }
 
 .codigo{
@@ -30,10 +38,6 @@
 
 .comentario{
     color: rgb(128, 158, 114);
-    /* VS Code Color Comentary */
-    /* color: #6A9955; */
-    /* Mapler Color Comentary */
-    /* color: rgb(128, 128, 128); */
 }
 
 .caractere{

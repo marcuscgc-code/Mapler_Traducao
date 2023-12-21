@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragmentos/head.html"></head>
+<head th:replace="@{/fragmentos/head.html}"></head>
 <body>
 
 <!-- Header -->
 <!-- Cabecalho -->
-<header th:replace="fragmentos/header.html"></header>
+<header th:replace="@{/fragmentos/header.html}"></header>
 <!-- Corpo principal do site -->
 <main>
     <div class="container py-5 px-3 pt-3 px-sm-5">
         <!-- Menu -->
-        <div th:replace="fragmentos/menu-hubexercicios.html"></div>
+        <div th:replace="@{/fragmentos/menu-hubexercicios.html}"></div>
         <!-- Content -->
 
         <!-- Secao principal -->
-        <section id="VisaoGeral">
+        <section>
             <div class="mt-4">
                 <h1>Estruturas de Decisão</h1>
+
                 <p><a class="rosa" href="/exemplo/portugol/condicionais#Se" target="_self">Se</a><span class="rosa">-</span><a class="rosa" href="/exemplo/portugol/condicionais#Senao" target="_self">senao</a>:</p>
                 <ul>
                     <li>A estrutura "se" permite que você avalie uma condição. Se a condição for verdadeira, o bloco de código associado ao "se" é executado.</li>
@@ -31,7 +31,7 @@
                 <section id="questao1">
                     <h3>Questao 1</h3>
                     <p>Peça ao usuário para inserir sua idade e informe se ele é menor de idade ou maior de idade.</p>
-                    <div class="accordion" id="questao1">
+                    <div class="accordion">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR1" aria-expanded="false" aria-controls="#collapseR1">
@@ -60,7 +60,7 @@
                                         <h3 class="mt-4">Fluxograma</h3>
                                         <hr>
                                         <figure class="figure">
-                                            <img src="https://portugol.sourceforge.io/assets/images/exercicios/decisao/questao1e2.png" class="rounded float-left" alt="resolução da questão 1 com fluxogramas">
+                                            <img th:src="@{/images/exercicios/decisao/questao1e2.png}" class="rounded float-left" alt="resolução da questão 1 com fluxogramas">
                                         </figure>
                                     </div>
                                 </div>
@@ -68,11 +68,12 @@
                         </div>
                     </div>
                 </section>
+
                 <section id="questao2">
                     <div class="mt-4">
                         <h3>Questao 2</h3>
                         <p>Crie um programa que determine se um número inserido pelo usuário é par ou ímpar.</p>
-                        <div class="accordion" id="questao2">
+                        <div class="accordion">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR2" aria-expanded="false" aria-controls="#collapseR2">
@@ -99,7 +100,7 @@
                                             <h3 class="mt-4">Fluxograma</h3>
                                             <hr>
                                             <figure class="figure">
-                                                <img src="https://portugol.sourceforge.io/assets/images/exercicios/decisao/questao1e2.png" class="rounded float-left" alt="resolução da questão 2 com fluxogramas">
+                                                <img th:src="@{/images/exercicios/decisao/questao1e2.png}" class="rounded float-left" alt="resolução da questão 2 com fluxogramas">
                                             </figure>
                                         </div>
                                     </div>
@@ -112,7 +113,7 @@
                     <div class="mt-4">
                         <h3>Questao 3</h3>
                         <p>Faça um programa que determine se um número é positivo, negativo ou zero.</p>
-                        <div class="accordion" id="questao3">
+                        <div class="accordion">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR3" aria-expanded="false" aria-controls="#collapseR3">
@@ -141,7 +142,7 @@
                                             <h3 class="mt-4">Fluxograma</h3>
                                             <hr>
                                             <figure class="figure">
-                                                <img src="https://portugol.sourceforge.io/assets/images/exercicios/decisao/questao3.png" class="rounded float-left" alt="resolução da questão 3 com fluxogramas">
+                                                <img th:src="@{/images/exercicios/decisao/questao3.png}" class="rounded float-left" alt="resolução da questão 3 com fluxogramas">
                                             </figure>
                                         </div>
                                     </div>
@@ -154,7 +155,7 @@
                     <div class="mt-4">
                         <h3>Questao 4</h3>
                         <p>Encontre o dobro de um número caso ele seja positivo e o seu triplo caso seja negativo, imprimindo o resultado.</p>
-                        <div class="accordion" id="questao4">
+                        <div class="accordion">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR4" aria-expanded="false" aria-controls="#collapseR4">
@@ -180,7 +181,7 @@
                                             <h3 class="mt-4">Fluxograma</h3>
                                             <hr>
                                             <figure class="figure">
-                                                <img src="https://portugol.sourceforge.io/assets/images/exercicios/decisao/questao4.png" class="rounded float-left" alt="resolução da questão 4 com fluxogramas">
+                                                <img th:src="@{/images/exercicios/decisao/questao4.png}" class="rounded float-left" alt="resolução da questão 4 com fluxogramas">
                                             </figure>
                                         </div>
                                     </div>
@@ -193,7 +194,7 @@
                     <div class="mt-4">
                         <h3>Questao 5</h3>
                         <p>Desenvolva um programa que classifique um triângulo como equilátero, isósceles ou escaleno, com base nas medidas dos lados inseridos.</p>
-                        <div class="accordion" id="questao5">
+                        <div class="accordion">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR5" aria-expanded="false" aria-controls="#collapseR5">
@@ -230,7 +231,7 @@
                                             <h3 class="mt-4">Fluxograma</h3>
                                             <hr>
                                             <figure class="figure">
-                                                <img src="https://portugol.sourceforge.io/assets/images/exercicios/decisao/questao5.png" class="rounded float-left" alt="resolução da questão 5 com fluxogramas">
+                                                <img th:src="@{/images/exercicios/decisao/questao5.png}" class="rounded float-left" alt="resolução da questão 5 com fluxogramas">
                                             </figure>
                                         </div>
                                     </div>
@@ -246,10 +247,10 @@
 
 <!-- Footer -->
 <!-- Rodape -->
-<footer th:replace="fragmentos/footer.html"></footer>
+<footer th:replace="@{/fragmentos/footer.html}"></footer>
 <!-- JS -->
 <!-- Bootstrap 5 Bundle Core -->
-<script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
 
 </html>

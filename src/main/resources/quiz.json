@@ -200,7 +200,7 @@
           "x <- 10;",
           "x <- 10"
       ],
-      "correct": "Um algoritmo é uma sequência finita de instruções bem definidas para resolver um problema",
+      "correct": "x -> 10;",
       "link" : "/exemplo/portugol/tipos#Numericos",
       "image": ""
   },
