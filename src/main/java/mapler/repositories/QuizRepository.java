@@ -1,4 +1,4 @@
-package mapler.Repositories;
+package mapler.repositories;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

@@ -1,4 +1,5 @@
-package mapler.Controllers;
+package mapler.controllers;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -13,18 +14,24 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import mapler.Repositories.QuizRepository;
+import mapler.repositories.QuizRepository;
 import mapler.model.Entities.Quiz;
 import mapler.model.Entities.QuizScore;
+
 @Controller
 public class QuizController {
-    @Autowired
-    private QuizRepository quizRepository = new QuizRepository();
+
+
+    private final QuizRepository quizRepository;
     
     private List<Quiz> quizzes;
     private Quiz currentQuiz;
     private boolean read = false;
     private QuizScore quizScore;
+
+    public QuizController() {
+        this.quizRepository = new QuizRepository();
+    }
 
     @GetMapping(value = "/quiz")
     public ModelAndView home() {

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:replace="@{/fragmentos/head.html}"></head>
+<head th:replace="~{/fragmentos/head :: head}"></head>
 
 <body>
-<header th:replace="@{/fragmentos/header.html}"></header>
+<header th:replace="~{/fragmentos/header :: header}"></header>
 <main>
     <div class="container py-5 px-3 pt-3 px-sm-5">
         <div th:replace="@{/fragmentos/menu-ajuda-fluxograma.html}"></div>
@@ -133,7 +133,7 @@
 </main>
 
 <!-- Rodape -->
-<footer th:replace="@{/fragmentos/footer.html}"></footer>
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
 <!-- JS -->
 <!-- Bootstrap 5 Bundle Core -->
 <script th:src="@{/js/bootstrap.bundle.min.js}"></script>

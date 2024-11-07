@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.3</version>
+		<version>3.3.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ifma.edu.mapler</groupId>
@@ -14,7 +14,8 @@
 	<name>compiler</name>
 	<description>O Mapler na web.</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
+		<spring.version>3.3.4</spring.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -29,15 +30,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.thymeleaf</groupId>
-			<artifactId>thymeleaf</artifactId>
-			<version>3.1.2.RELEASE</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.thymeleaf</groupId>
-			<artifactId>thymeleaf-spring5</artifactId>
-			<version>3.1.2.RELEASE</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
@@ -55,7 +50,7 @@
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>jquery</artifactId>
-			<version>2.1.1</version>
+			<version>3.7.1</version>
 		</dependency>
 
 		<dependency>
@@ -74,11 +69,6 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.15.3</version>
         </dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

@@ -31,7 +31,7 @@
     </style>
 </head>
 <body>
-    <header th:replace="@{/fragmentos/header.html}"></header> 
+    <header th:replace="~{/fragmentos/header :: header}"></header>
     <h1>Bem-vindo ao Quiz!</h1>
     <p>Teste seus conhecimentos com nosso quiz emocionante. Boa sorte!</p>
 
@@ -43,6 +43,6 @@
             window.location.href = "quiz";
         }
     </script>
-    <footer th:replace="@{/fragmentos/footer.html}"></footer>
+    <footer th:replace="~{/fragmentos/footer :: footer}"></footer>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package mapler.Controllers.validation;
+package mapler.controllers.validation;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 

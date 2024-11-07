@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:replace="@{/fragmentos/head.html}"></head>
+<head th:replace="~{/fragmentos/head :: head}"></head>
 <body>
 
 <!-- Header -->
 <!-- Cabecalho -->
-<header th:replace="@{/fragmentos/header.html}"></header>
+<header th:replace="~{/fragmentos/header :: header}"></header>
 
     <main class="container py-5 px-3 pt-3 px-sm-5">
     <!-- Corpo principal do site -->
@@ -204,7 +204,7 @@
     </div>
 </main>
 <!-- Rodape -->
-<footer th:replace="fragmentos/footer.html"></footer>
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
 
 <!-- JS -->
 <!-- Bootstrap 5 Bundle Core -->

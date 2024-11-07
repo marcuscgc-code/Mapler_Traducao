@@ -1,4 +1,4 @@
-package mapler.Controllers;
+package mapler.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
