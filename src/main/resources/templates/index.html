@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragmentos/head.html"></head>
+<head th:replace="~{/fragmentos/head :: head}"></head>
 <body>
 
-    <!-- Header -->
-    <!-- Cabecalho -->
-    <header th:replace="fragmentos/header.html"></header>
+<!-- Header -->
+<!-- Cabecalho -->
+<header th:replace="~{/fragmentos/header :: header}"></header>
     <!-- Corpo principal do site -->
     <main>
         <div class="container py-5 px-5 px-sm-2">
@@ -31,18 +31,18 @@
             </div>
             
             <div class="d-flex flex-column flex-lg-row align-items-center">
-                <a class="text-decoration-none" href="https://portugol.sourceforge.io/download.html">
+                <a class="text-decoration-none" href="/download">
                     <button type="button" class="btn btn-lg btn-primary px-5 mb-3 me-md-3">
                         Baixar
                     </button>
                 </a>
 
-                <span class="rosa">v0.0.4</span>
+                <span class="rosa">v0.0.6</span>
             </div>
         </div>
 
         <div class="d-none d-lg-block">
-            <img src="https://portugol.sourceforge.io/assets/images/imagem-banner-inicio.png" alt="Banner de Inicio" width="400px">
+            <img src="images/imagem-banner-inicio.png" alt="Banner de Inicio" width="400px">
         </div>
     </div>
 
@@ -94,12 +94,10 @@
 </section>
         </div>
     </main>
-
-    <!-- Footer -->
-    <!-- Rodape -->
-    <footer th:replace="fragmentos/footer.html"></footer>
-    <!-- JS -->
-    <!-- Bootstrap 5 Bundle Core -->
-<script src="https://portugol.sourceforge.io/assets/js/bootstrap.bundle.min.js"></script></body>
-
+<!-- Rodape -->
+<footer th:replace="~{/fragmentos/footer :: footer}"></footer>
+<!-- JS -->
+<!-- Bootstrap 5 Bundle Core -->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
 </html>
