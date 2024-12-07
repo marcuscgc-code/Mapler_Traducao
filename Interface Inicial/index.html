@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor com Terminal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <ul>
+      <li>Arquivo</li>
+      <li>Exemplos</li>
+      <li>Linguagem</li>
+      <li>Configurações</li>
+      <li>Sobre</li>
+    </ul>
+  </div>
+
+  <div class="main-container">
+    <!-- Lado esquerdo: Botões -->
+    <div class="sidebar">
+      <button class="btn" id="executar-btn">▶ Executar</button>
+      <button class="btn">🐞 Debug</button>
+      <button class="btn">📜 Traduzir</button>
+    </div>
+
+    <!-- Editor de Código -->
+    <div class="editor">
+      <pre id="code-area">
+<span class="keyword">variaveis</span>
+  <span class="var">a</span>, <span class="var">b</span>:<span class="type">inteiro</span>;
+
+<span class="keyword">inicio</span>
+  <span class="var">a</span> &lt;- <span class="number">10</span>;
+  <span class="var">b</span> &lt;- <span class="number">5</span>;
+<span class="keyword">fim</span>
+      </pre>
+    </div>
+  </div>
+
+  <!-- Terminal escondido -->
+  <div class="terminal-container" id="terminal">
+    <div class="terminal-header">Terminal</div>
+    <div class="terminal-log" id="terminal-log"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

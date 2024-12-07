@@ -1,0 +1,104 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #282c34;
+    color: #abb2bf;
+  }
+  
+  /* Barra de navegação */
+  .navbar {
+    background-color: #1e2126;
+    padding: 10px 20px;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+  }
+  
+  .navbar li {
+    color: #abb2bf;
+    cursor: pointer;
+  }
+  
+  .navbar li:hover {
+    color: #61afef;
+  }
+  
+  /* Container principal */
+  .main-container {
+    display: flex;
+    height: 80vh; /* Deixa espaço para o terminal na parte inferior */
+  }
+  
+  /* Barra lateral */
+  .sidebar {
+    background-color: #1e2126;
+    padding: 15px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn {
+    background-color: #61afef;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .btn:hover {
+    background-color: #528cca;
+  }
+  
+  /* Editor de código */
+  .editor {
+    flex: 1;
+    background-color: #282c34;
+    padding: 20px;
+    overflow: auto;
+    color: #abb2bf;
+  }
+  
+  pre {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Terminal */
+  .terminal-container {
+    display: none; /* Escondido por padrão */
+    background-color: #1e2126;
+    color: #abb2bf;
+    height: 20vh; /* Ocupa 20% da tela */
+    width: 100%;
+    border-top: 2px solid #61afef;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .terminal-header {
+    background-color: #61afef;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+  }
+  
+  .terminal-log {
+    padding: 10px;
+    overflow-y: auto;
+    height: calc(100% - 30px); /* Ajusta o tamanho com o header */
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
