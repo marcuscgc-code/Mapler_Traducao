@@ -6,7 +6,7 @@ const terminalLog = document.getElementById("terminal-log");
 executarBtn.addEventListener("click", () => {
   // Exibe o terminal
   terminal.style.display = "block";
-
+//teste
   // Simula o processamento de código
   terminalLog.innerHTML = ""; // Limpa o log anterior
   logResultado("Executando código...");
