@@ -3,9 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editor com Terminal</title>
+  <title>Editor com CodeMirror</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/monokai.min.css">
+
+    <style>
+
+    #code-area {
+      height: 100%;
+      border: 1px solid #1e2126;
+    }
+
+    .terminal-container {
+      height: 150px;
+      background-color: #222;
+      color: #0f0;
+      padding: 10px;
+      overflow-y: auto;
+      font-family: monospace;
+    }
+
+    .terminal-header {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+  </style>
 </head>
 <body>
   <div class="navbar">
@@ -28,27 +53,47 @@
 
     <!-- Editor de Código -->
     <div class="editor">
-      <pre id="code-area">
-<span class="keyword">variaveis</span>
-  <span class="var">a</span>, <span class="var">b</span>:<span class="type">inteiro</span>;
-
-<span class="keyword">inicio</span>
-  <span class="var">a</span> &lt;- <span class="number">10</span>;
-  <span class="var">b</span> &lt;- <span class="number">5</span>;
-<span class="keyword">fim</span>
-      </pre>
+      <textarea id="code-area"></textarea>
     </div>
   </div>
-  
+
   <!-- Terminal escondido -->
   <div class="terminal-container" id="terminal">
     <div class="terminal-header">Terminal</div>
     <div class="terminal-log" id="terminal-log"></div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
-<script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
 
-  <script src="script.js"></script>
+  <!-- Dependências do CodeMirror -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/clike/clike.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/javascript-hint.min.js"></script>
+
+  <script>
+    // Inicializando o editor CodeMirror
+    var editor = CodeMirror.fromTextArea(document.getElementById("code-area"), {
+  mode: "javascript",
+  theme: "monokai",
+  lineNumbers: true,
+  tabSize: 2,
+  lineWrapping: true,
+  autoCloseBrackets: true,
+  matchBrackets: true,
+  extraKeys: { "Ctrl-Space": "autocomplete" },
+});
+
+
+    // Exemplo: botão "Executar" para capturar código do editor
+    document.getElementById("executar-btn").addEventListener("click", function () {
+      var code = editor.getValue();
+      var terminalLog = document.getElementById("terminal-log");
+      terminalLog.innerHTML += `<pre>${code}</pre>`;
+      terminalLog.scrollTop = terminalLog.scrollHeight;
+    });
+  </script>
 </body>
 </html>
+

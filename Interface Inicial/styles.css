@@ -121,3 +121,42 @@ pre {
 .type {
   color: #56b6c2; /* Azul Claro */
 }
+
+
+/* Alteração pro CodiMirror */
+/* Customizando a aparência do CodeMirror para integrar com o estilo atual */
+.CodeMirror {
+  height: 100%; /* Ocupa todo o espaço do editor */
+  font-size: 16px; /* Mesma fonte usada antes */
+  line-height: 1.5;
+  background-color: #282c34;
+  color: #abb2bf;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Personalizando a seleção dentro do CodeMirror */
+.CodeMirror-selected {
+  background-color: #3e4451 !important; /* Destaque mais sutil */
+}
+
+/* Cores do cursor */
+.CodeMirror-cursor {
+  border-left: 2px solid #528cca !important;
+}
+
+/* Remover borda padrão do CodeMirror */
+.CodeMirror-lines {
+  padding: 10px; /* Adicionando espaçamento interno */
+}
+
+/* Ajustando o estilo da barra de rolagem */
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  background-color: #1e2126;
+}
+
+.CodeMirror-gutters {
+  background-color: #1e2126;
+  color: #abb2bf;
+  border: none;
+}

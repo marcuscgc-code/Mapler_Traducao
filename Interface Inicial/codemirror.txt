@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor com Terminal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+</head>
+<body>
+  <div class="navbar">
+    <ul>
+      <li>Arquivo</li>
+      <li>Exemplos</li>
+      <li>Linguagem</li>
+      <li>Configurações</li>
+      <li>Sobre</li>
+    </ul>
+  </div>
+
+  <div class="main-container">
+    <!-- Lado esquerdo: Botões -->
+    <div class="sidebar">
+      <button class="btn" id="executar-btn">▶ Executar</button>
+      <button class="btn">🐞 Debug</button>
+      <button class="btn">📜 Traduzir</button>
+    </div>
+
+    <!-- Editor de Código -->
+    <div class="editor">
+      <textarea id="code-area">// Comece a digitar aqui seu código...</textarea>
+    </div>
+  </div>
+  
+  <!-- Terminal escondido -->
+  <div class="terminal-container" id="terminal">
+    <div class="terminal-header">Terminal</div>
+    <div class="terminal-log" id="terminal-log"></div>
+  </div>
+  
+  <!-- Importando bibliotecas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+
+  <!-- Script para inicializar o CodeMirror -->
+  <script>
+    // Inicializando CodeMirror no lugar do textarea
+    const editor = CodeMirror.fromTextArea(document.getElementById('code-area'), {
+      lineNumbers: true,
+      mode: 'javascript', // Configurando para destacar JavaScript (pode mudar se necessário)
+      theme: 'material', // Você pode alterar o tema
+      indentUnit: 2,
+      indentWithTabs: true,
+      tabSize: 2
+    });
+  </script>
+</body>
+</html>
