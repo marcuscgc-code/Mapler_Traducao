@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor com CodeMirror</title>
+  <!-- CodeMirror CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.css">
+
+  <style>
+    body {
+      background-color: #eee;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #codeeditor {
+      width: 80%;
+      height: 500px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="codeeditor"></div>
+
+  <!-- CodeMirror JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/css-hint.min.js"></script>
+
+  <script>
+    // Inicializando o editor CodeMirror
+    var editor = CodeMirror(document.getElementById("codeeditor"), {
+      value: "#test {\n\tposition: absolute;\n\twidth: auto;\n\theight: 50px;\n}",
+      mode: "css", // Define o modo para CSS
+      tabSize: 4, // Tamanho da tabulação
+      lineNumbers: true, // Exibe os números das linhas
+      firstLineNumber: 1, // Define o número inicial da linha
+      extraKeys: { "Ctrl-Space": "autocomplete" } // Atalho para autocomplete
+    });
+  </script>
+</body>
+</html>
