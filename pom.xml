@@ -54,12 +54,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>interpretadorPtEstruturadoJava</groupId>
-			<artifactId>interpretadorMACP</artifactId>
-			<version>0.0.6-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
             <version>2.16.0</version>
