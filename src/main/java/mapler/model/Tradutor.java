@@ -1,21 +1,11 @@
 package mapler.model;
 
-import conversores.ConversorStrategy;
-import debug.DebugSnapshot;
-import debug.EstadoDebug;
-import interpretador.AcaoInterpretador;
-import interpretador.InterpretadorService;
-import interpretador.LeitorEntradaConsole;
-
-public class Tradutor implements AcaoInterpretador{
+public class Tradutor {
     private String status;
     private String traducao;
 
-   
-    private InterpretadorService interpretadorService;
 
     public Tradutor(){
-      interpretadorService = new InterpretadorService(this);
         this.status = "FALSE";
     }
 
@@ -30,7 +20,7 @@ public class Tradutor implements AcaoInterpretador{
     public void ativar(String codigo){
         this.status = "TRUE";
         try{
-            this.traducao = interpretadorService.traduzirDoTexto(codigo, ConversorStrategy.JAVA);
+            this.traducao = "Ola mundo, tradutor em construcao.";
         }catch (Exception e){
             this.traducao = e.toString();
             System.out.println("Erro ao traduzir.");
@@ -50,43 +40,4 @@ public class Tradutor implements AcaoInterpretador{
         this.traducao = traducao;
     }
 
-    @Override
-    public void onInput(LeitorEntradaConsole leitorEntradaConsole) {
-
-    }
-
-    @Override
-    public void onOutput(String s) {
-
-    }
-
-    @Override
-    public void onInterpretacaoConcluida(double v) {
-
-    }
-
-    @Override
-    public void onInterpretacaoInterrompida(double v) {
-
-    }
-
-    @Override
-    public void onDebugMudancaEstado(EstadoDebug estadoDebug) {
-
-    }
-
-    @Override
-    public void onDebugPassoExecutado(DebugSnapshot debugSnapshot) {
-
-    }
-
-    @Override
-    public void onErro(RuntimeException e) {
-
-    }
-
-    @Override
-    public void onLog(String s) {
-
-    }
 }
